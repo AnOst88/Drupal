@@ -1,0 +1,24 @@
+uuid: cda0e89c-8508-45e5-9e71-b28acfded697
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_data_podpisaniya_v_tirazh
+    - node.type.book
+  module:
+    - datetime
+id: node.book.field_data_podpisaniya_v_tirazh
+field_name: field_data_podpisaniya_v_tirazh
+entity_type: node
+bundle: book
+label: 'Дата подписания в тираж'
+description: 'Date  '
+required: true
+translatable: false
+default_value:
+  -
+    default_date_type: relative
+    default_date: 12.12.2020
+default_value_callback: ''
+settings: {  }
+field_type: datetime

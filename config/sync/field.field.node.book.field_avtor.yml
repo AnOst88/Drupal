@@ -1,0 +1,32 @@
+uuid: b7b72d91-7dda-4ea2-b580-67246f464a7a
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_avtor
+    - node.type.book
+  content:
+    - 'user:user:cb41ef73-95ce-48f9-b753-1776ce0dc029'
+id: node.book.field_avtor
+field_name: field_avtor
+entity_type: node
+bundle: book
+label: Автор
+description: ''
+required: true
+translatable: false
+default_value:
+  -
+    target_uuid: cb41ef73-95ce-48f9-b753-1776ce0dc029
+default_value_callback: ''
+settings:
+  handler: 'default:user'
+  handler_settings:
+    include_anonymous: true
+    filter:
+      type: _none
+    target_bundles: null
+    sort:
+      field: _none
+    auto_create: false
+field_type: entity_reference
