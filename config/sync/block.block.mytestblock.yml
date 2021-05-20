@@ -1,0 +1,31 @@
+uuid: 4b0ff4ea-2793-4c82-8394-5fa226b8c527
+langcode: en
+status: true
+dependencies:
+  content:
+    - 'block_content:my_type_block:d0aae805-f2c8-499b-b278-0910486b62c6'
+  module:
+    - block_content
+    - system
+  theme:
+    - bartik
+id: mytestblock
+theme: bartik
+region: sidebar_first
+weight: 0
+provider: null
+plugin: 'block_content:d0aae805-f2c8-499b-b278-0910486b62c6'
+settings:
+  id: 'block_content:d0aae805-f2c8-499b-b278-0910486b62c6'
+  label: 'My Test Block'
+  provider: block_content
+  label_display: visible
+  status: true
+  info: ''
+  view_mode: full
+visibility:
+  request_path:
+    id: request_path
+    pages: '<front>'
+    negate: false
+    context_mapping: {  }
