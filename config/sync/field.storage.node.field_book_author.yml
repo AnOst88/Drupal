@@ -1,12 +1,12 @@
-uuid: 45369b0d-b398-4c18-8462-ba194d7396ef
+uuid: 40c9e7a1-451a-4f1b-9f47-2a8c0cdd5fd2
 langcode: en
 status: true
 dependencies:
   module:
     - node
     - text
-id: node.field_isbn
-field_name: field_isbn
+id: node.field_book_author
+field_name: field_book_author
 entity_type: node
 type: text
 settings:

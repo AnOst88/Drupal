@@ -1,17 +1,17 @@
-uuid: cd42b705-f559-46dc-8acc-8e830241ae77
+uuid: fa03f44d-483f-436c-912e-0e6bd0b1ac3f
 langcode: en
 status: true
 dependencies:
   module:
+    - datetime
     - node
-    - user
-id: node.field_avtor
-field_name: field_avtor
+id: node.field_book_publication_date
+field_name: field_book_publication_date
 entity_type: node
-type: entity_reference
+type: datetime
 settings:
-  target_type: user
-module: core
+  datetime_type: datetime
+module: datetime
 locked: false
 cardinality: 1
 translatable: true
