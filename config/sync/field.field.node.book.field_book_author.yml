@@ -1,23 +1,23 @@
-uuid: e00be14d-98e2-43c6-ae8e-ec12b33f822e
+uuid: 39ead468-10cb-409c-bea4-291db8fc1403
 langcode: en
 status: true
 dependencies:
   config:
-    - field.storage.node.field_isbn
+    - field.storage.node.field_book_author
     - node.type.book
   module:
     - text
-id: node.book.field_isbn
-field_name: field_isbn
+id: node.book.field_book_author
+field_name: field_book_author
 entity_type: node
 bundle: book
-label: ISBN
+label: Author
 description: ''
-required: false
+required: true
 translatable: false
 default_value:
   -
-    value: 2-266-11156-6
+    value: 'Эрих Мария Ремарк'
     format: basic_html
 default_value_callback: ''
 settings: {  }

@@ -1,17 +1,17 @@
-uuid: ae1853c5-6949-479a-9a7f-6f8cc7742dd8
+uuid: 94554889-8fc4-4e3e-abc0-2d123570884a
 langcode: en
 status: true
 dependencies:
   module:
-    - datetime
     - node
-id: node.field_data_izdaniya
-field_name: field_data_izdaniya
+id: node.field_book_circulation
+field_name: field_book_circulation
 entity_type: node
-type: datetime
+type: integer
 settings:
-  datetime_type: datetime
-module: datetime
+  unsigned: false
+  size: normal
+module: core
 locked: false
 cardinality: 1
 translatable: true

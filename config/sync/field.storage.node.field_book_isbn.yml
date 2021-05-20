@@ -1,17 +1,18 @@
-uuid: c0585872-0ec9-4bb1-9abb-367c8e0b06f4
+uuid: 584526a0-1bc4-4c51-b814-7e1e8531a8cc
 langcode: en
 status: true
 dependencies:
   module:
-    - datetime
     - node
-id: node.field_date
-field_name: field_date
+id: node.field_book_isbn
+field_name: field_book_isbn
 entity_type: node
-type: datetime
+type: string
 settings:
-  datetime_type: datetime
-module: datetime
+  max_length: 255
+  is_ascii: false
+  case_sensitive: false
+module: core
 locked: false
 cardinality: 1
 translatable: true

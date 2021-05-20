@@ -1,18 +1,18 @@
-uuid: 60fa7849-68d7-4bd7-a778-ea4d8007902b
+uuid: ef73da57-e7d3-4060-8303-730ba16583ec
 langcode: en
 status: true
 dependencies:
   config:
-    - field.storage.node.field_date
+    - field.storage.node.field_book_date_of_signing
     - node.type.book
   module:
     - datetime
-id: node.book.field_date
-field_name: field_date
+id: node.book.field_book_date_of_signing
+field_name: field_book_date_of_signing
 entity_type: node
 bundle: book
-label: Date
-description: date
+label: 'Date of signing for circulation'
+description: ''
 required: true
 translatable: false
 default_value:
