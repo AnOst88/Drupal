@@ -1,0 +1,8 @@
+uuid: a4d64b61-5195-4b8a-8431-858e8cf4e613
+langcode: en
+status: true
+dependencies: {  }
+name: Category
+vid: category
+description: task68
+weight: 0

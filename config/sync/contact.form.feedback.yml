@@ -1,0 +1,14 @@
+uuid: c5931857-8931-4971-b1e1-d478085f37bc
+langcode: en
+status: true
+dependencies: {  }
+_core:
+  default_config_hash: vymHlgJy26BuI5GGj9-IXjwR3dRC5C0tij4BpWJnoqw
+id: feedback
+label: 'Website feedback'
+recipients:
+  - GeMail2024@gmail.com
+reply: ''
+weight: 0
+message: 'Your message has been sent.'
+redirect: ''

@@ -1,0 +1,8 @@
+uuid: d9401d5a-7b82-46e9-90c6-a0f287cc1eca
+langcode: und
+status: true
+dependencies: {  }
+name: shucletet
+vid: shucletet
+description: 'Description of shucletet'
+weight: -9

@@ -1,0 +1,8 @@
+uuid: 762cdc6a-2204-416a-9842-9f8c20eebaa8
+langcode: und
+status: true
+dependencies: {  }
+name: phispeko
+vid: phispeko
+description: 'Description of phispeko'
+weight: -10

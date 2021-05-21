@@ -1,0 +1,8 @@
+uuid: ddc2e56d-75d1-4959-85a2-cf666932ad2c
+langcode: und
+status: true
+dependencies: {  }
+name: kewomepris
+vid: kewomepris
+description: 'Description of kewomepris'
+weight: -6

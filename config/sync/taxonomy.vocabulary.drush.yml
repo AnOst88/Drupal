@@ -1,0 +1,8 @@
+uuid: 96fdb14e-1011-418b-9e45-4a7f6555db3e
+langcode: und
+status: true
+dependencies: {  }
+name: drush
+vid: drush
+description: 'Description of drush'
+weight: -7

@@ -1,0 +1,8 @@
+uuid: 6ceda7a2-75b3-480b-ab1e-2d6266a6a0ee
+langcode: und
+status: true
+dependencies: {  }
+name: fraprinemubu
+vid: fraprinemubu
+description: 'Description of fraprinemubu'
+weight: -24

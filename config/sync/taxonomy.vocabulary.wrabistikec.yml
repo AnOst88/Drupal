@@ -1,0 +1,8 @@
+uuid: af64cb7a-5448-4b12-b4da-d7af28f932af
+langcode: und
+status: true
+dependencies: {  }
+name: wrabistikec
+vid: wrabistikec
+description: 'Description of wrabistikec'
+weight: 22
