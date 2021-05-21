@@ -9,7 +9,9 @@ dependencies:
     - field.field.node.book.field_book_isbn
     - field.field.node.book.field_book_poster
     - field.field.node.book.field_book_publication_date
+
     - field.field.node.book.field_category
+
     - image.style.thumbnail
     - node.type.book
   module:
@@ -71,12 +73,14 @@ content:
     third_party_settings: {  }
     type: datetime_default
     region: content
+
   field_category:
     weight: 26
     settings: {  }
     third_party_settings: {  }
     type: options_select
     region: content
+
   path:
     type: path
     weight: 12
