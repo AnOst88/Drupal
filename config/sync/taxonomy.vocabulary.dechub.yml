@@ -1,0 +1,8 @@
+uuid: 3003a017-8516-4d4b-84ad-648a05fe9629
+langcode: und
+status: true
+dependencies: {  }
+name: dechub
+vid: dechub
+description: 'Description of dechub'
+weight: 27

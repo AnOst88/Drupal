@@ -1,0 +1,8 @@
+uuid: a3311ff4-15a9-429d-8995-e5d12cd3c63d
+langcode: und
+status: true
+dependencies: {  }
+name: bese
+vid: bese
+description: 'Description of bese'
+weight: -4

@@ -9,6 +9,9 @@ dependencies:
     - field.field.node.book.field_book_isbn
     - field.field.node.book.field_book_poster
     - field.field.node.book.field_book_publication_date
+
+    - field.field.node.book.field_category
+
     - node.type.book
   module:
     - datetime
@@ -71,9 +74,25 @@ content:
     third_party_settings: {  }
     type: datetime_default
     region: content
+
+  field_category:
+    weight: 107
+    label: above
+    settings:
+      link: true
+    third_party_settings: {  }
+    type: entity_reference_label
+    region: content
+  links:
+    weight: 100
+    region: content
+    settings: {  }
+    third_party_settings: {  }
+
   links:
     weight: 100
     settings: {  }
     third_party_settings: {  }
     region: content
+
 hidden: {  }

@@ -1,0 +1,8 @@
+uuid: 660026c1-2002-4dbc-8926-9149bc9230ac
+langcode: und
+status: true
+dependencies: {  }
+name: tiprusp
+vid: tiprusp
+description: 'Description of tiprusp'
+weight: -27

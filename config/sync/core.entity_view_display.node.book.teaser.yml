@@ -10,6 +10,9 @@ dependencies:
     - field.field.node.book.field_book_isbn
     - field.field.node.book.field_book_poster
     - field.field.node.book.field_book_publication_date
+
+    - field.field.node.book.field_category
+
     - node.type.book
   module:
     - user
@@ -30,3 +33,6 @@ hidden:
   field_book_isbn: true
   field_book_poster: true
   field_book_publication_date: true
+
+  field_category: true
+
