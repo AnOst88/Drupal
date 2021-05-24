@@ -5,4 +5,8 @@ dependencies: {  }
 name: clusajikac
 vid: clusajikac
 description: 'Description of clusajikac'
+<<<<<<< HEAD
 weight: 24
+=======
+weight: 23
+>>>>>>> 55f3495775b168b5b6092ac0978e74d5ea7d5dfd

@@ -5,4 +5,8 @@ dependencies: {  }
 name: girepowibre
 vid: girepowibre
 description: 'Description of girepowibre'
+<<<<<<< HEAD
 weight: 29
+=======
+weight: 28
+>>>>>>> 55f3495775b168b5b6092ac0978e74d5ea7d5dfd

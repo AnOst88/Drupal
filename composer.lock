@@ -4,7 +4,11 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#installing-dependencies",
         "This file is @generated automatically"
     ],
+<<<<<<< HEAD
     "content-hash": "cac473ade193945d6f26610d233d70c1",
+=======
+    "content-hash": "f7d5ed0827dad107e7abb97597683154",
+>>>>>>> 55f3495775b168b5b6092ac0978e74d5ea7d5dfd
     "packages": [
         {
             "name": "alchemy/zippy",
@@ -2257,6 +2261,87 @@
             "time": "2020-10-27T21:46:55+00:00"
         },
         {
+            "name": "drupal/admin_toolbar",
+            "version": "3.0.0",
+            "source": {
+                "type": "git",
+                "url": "https://git.drupalcode.org/project/admin_toolbar.git",
+                "reference": "3.0.0"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://ftp.drupal.org/files/projects/admin_toolbar-3.0.0.zip",
+                "reference": "3.0.0",
+                "shasum": "204f7a0e8b62a8a54256142cf38ca139739fb65c"
+            },
+            "require": {
+                "drupal/core": "^8.8.0 || ^9.0"
+            },
+            "require-dev": {
+                "drupal/admin_toolbar_tools": "*"
+            },
+            "type": "drupal-module",
+            "extra": {
+                "drupal": {
+                    "version": "3.0.0",
+                    "datestamp": "1611311186",
+                    "security-coverage": {
+                        "status": "covered",
+                        "message": "Covered by Drupal's security advisory policy"
+                    }
+                }
+            },
+            "notification-url": "https://packages.drupal.org/8/downloads",
+            "license": [
+                "GPL-2.0-or-later"
+            ],
+            "authors": [
+                {
+                    "name": "Wilfrid Roze (eme)",
+                    "homepage": "https://www.drupal.org/u/eme",
+                    "role": "Maintainer"
+                },
+                {
+                    "name": "Romain Jarraud (romainj)",
+                    "homepage": "https://www.drupal.org/u/romainj",
+                    "role": "Maintainer"
+                },
+                {
+                    "name": "Adrian Cid Almaguer (adriancid)",
+                    "homepage": "https://www.drupal.org/u/adriancid",
+                    "email": "adriancid@gmail.com",
+                    "role": "Maintainer"
+                },
+                {
+                    "name": "Mohamed Anis Taktak (matio89)",
+                    "homepage": "https://www.drupal.org/u/matio89",
+                    "role": "Maintainer"
+                },
+                {
+                    "name": "fethi.krout",
+                    "homepage": "https://www.drupal.org/user/3206765"
+                },
+                {
+                    "name": "matio89",
+                    "homepage": "https://www.drupal.org/user/2320090"
+                },
+                {
+                    "name": "romainj",
+                    "homepage": "https://www.drupal.org/user/370706"
+                }
+            ],
+            "description": "Provides a drop-down menu interface to the core Drupal Toolbar.",
+            "homepage": "http://drupal.org/project/admin_toolbar",
+            "keywords": [
+                "Drupal",
+                "Toolbar"
+            ],
+            "support": {
+                "source": "https://git.drupalcode.org/project/admin_toolbar",
+                "issues": "https://www.drupal.org/project/issues/admin_toolbar"
+            }
+        },
+        {
             "name": "drupal/console",
             "version": "1.9.7",
             "source": {
@@ -2826,6 +2911,7 @@
             "time": "2020-08-07T22:30:30+00:00"
         },
         {
+<<<<<<< HEAD
             "name": "drupal/embed",
             "version": "1.4.0",
             "source": {
@@ -2841,16 +2927,57 @@
             },
             "require": {
                 "drupal/core": "^8.7.7 || ^9"
+=======
+            "name": "drupal/devel",
+            "version": "4.1.1",
+            "source": {
+                "type": "git",
+                "url": "https://git.drupalcode.org/project/devel.git",
+                "reference": "4.1.1"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://ftp.drupal.org/files/projects/devel-4.1.1.zip",
+                "reference": "4.1.1",
+                "shasum": "88e5d49dda26a3136291ecd97bc6c8e897b24198"
+            },
+            "require": {
+                "doctrine/common": "^2.7",
+                "drupal/core": "^8.8 || ^9",
+                "symfony/var-dumper": "^4 || ^5"
+            },
+            "conflict": {
+                "kint-php/kint": "<3"
+            },
+            "require-dev": {
+                "drush/drush": "^10"
+            },
+            "suggest": {
+                "kint-php/kint": "Kint provides an informative display of arrays/objects. Useful for debugging and developing."
+>>>>>>> 55f3495775b168b5b6092ac0978e74d5ea7d5dfd
             },
             "type": "drupal-module",
             "extra": {
                 "drupal": {
+<<<<<<< HEAD
                     "version": "8.x-1.4",
                     "datestamp": "1590176831",
+=======
+                    "version": "4.1.1",
+                    "datestamp": "1609419527",
+>>>>>>> 55f3495775b168b5b6092ac0978e74d5ea7d5dfd
                     "security-coverage": {
                         "status": "covered",
                         "message": "Covered by Drupal's security advisory policy"
                     }
+<<<<<<< HEAD
+=======
+                },
+                "drush": {
+                    "services": {
+                        "drush.services.yml": "^9 || ^10"
+                    }
+>>>>>>> 55f3495775b168b5b6092ac0978e74d5ea7d5dfd
                 }
             },
             "notification-url": "https://packages.drupal.org/8/downloads",
@@ -2859,6 +2986,7 @@
             ],
             "authors": [
                 {
+<<<<<<< HEAD
                     "name": "Dave Reid",
                     "homepage": "https://www.drupal.org/user/53892"
                 },
@@ -2902,6 +3030,37 @@
                 "url": "https://ftp.drupal.org/files/projects/views_field_view-8.x-1.0-beta3.zip",
                 "reference": "8.x-1.0-beta3",
                 "shasum": "d7e405584a48a0c5eb2440531ba3ffc66cc67bdc"
+=======
+                    "name": "drupalspoons",
+                    "homepage": "https://www.drupal.org/user/3647684"
+                },
+                {
+                    "name": "moshe weitzman",
+                    "homepage": "https://www.drupal.org/user/23"
+                }
+            ],
+            "description": "Various blocks, pages, and functions for developers.",
+            "homepage": "https://www.drupal.org/project/devel",
+            "support": {
+                "source": "https://gitlab.com/drupalspoons/devel",
+                "issues": "https://gitlab.com/drupalspoons/devel/-/issues",
+                "slack": "https://drupal.slack.com/archives/C012WAW1MH6"
+            }
+        },
+        {
+            "name": "drupal/module_filter",
+            "version": "3.2.0",
+            "source": {
+                "type": "git",
+                "url": "https://git.drupalcode.org/project/module_filter.git",
+                "reference": "8.x-3.2"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://ftp.drupal.org/files/projects/module_filter-8.x-3.2.zip",
+                "reference": "8.x-3.2",
+                "shasum": "b5c1a5141da392340232a1ad0934b921b862e1f4"
+>>>>>>> 55f3495775b168b5b6092ac0978e74d5ea7d5dfd
             },
             "require": {
                 "drupal/core": "^8 || ^9"
@@ -2909,16 +3068,25 @@
             "type": "drupal-module",
             "extra": {
                 "drupal": {
+<<<<<<< HEAD
                     "version": "8.x-1.0-beta3",
                     "datestamp": "1591410296",
                     "security-coverage": {
                         "status": "not-covered",
                         "message": "Beta releases are not covered by Drupal security advisories."
+=======
+                    "version": "8.x-3.2",
+                    "datestamp": "1614918371",
+                    "security-coverage": {
+                        "status": "covered",
+                        "message": "Covered by Drupal's security advisory policy"
+>>>>>>> 55f3495775b168b5b6092ac0978e74d5ea7d5dfd
                     }
                 }
             },
             "notification-url": "https://packages.drupal.org/8/downloads",
             "license": [
+<<<<<<< HEAD
                 "GPL-2.0-or-later"
             ],
             "authors": [
@@ -2947,6 +3115,25 @@
             "homepage": "https://www.drupal.org/project/views_field_view",
             "support": {
                 "source": "https://git.drupalcode.org/project/views_field_view"
+=======
+                "GPL-2.0+"
+            ],
+            "authors": [
+                {
+                    "name": "andrey.troeglazov",
+                    "homepage": "https://www.drupal.org/user/3145389"
+                },
+                {
+                    "name": "greenSkin",
+                    "homepage": "https://www.drupal.org/user/173855"
+                }
+            ],
+            "description": "Filter the modules list.",
+            "homepage": "http://drupal.org/project/module_filter",
+            "support": {
+                "source": "https://git.drupalcode.org/project/module_filter",
+                "issues": "https://www.drupal.org/project/issues/module_filter"
+>>>>>>> 55f3495775b168b5b6092ac0978e74d5ea7d5dfd
             }
         },
         {

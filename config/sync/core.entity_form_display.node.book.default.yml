@@ -9,8 +9,14 @@ dependencies:
     - field.field.node.book.field_book_isbn
     - field.field.node.book.field_book_poster
     - field.field.node.book.field_book_publication_date
+<<<<<<< HEAD
     - field.field.node.book.field_category
     - field.field.node.book.field_task_67_book_genres
+=======
+
+    - field.field.node.book.field_category
+
+>>>>>>> 55f3495775b168b5b6092ac0978e74d5ea7d5dfd
     - image.style.thumbnail
     - node.type.book
   module:
@@ -72,18 +78,26 @@ content:
     third_party_settings: {  }
     type: datetime_default
     region: content
+<<<<<<< HEAD
+=======
+
+>>>>>>> 55f3495775b168b5b6092ac0978e74d5ea7d5dfd
   field_category:
     weight: 26
     settings: {  }
     third_party_settings: {  }
     type: options_select
     region: content
+<<<<<<< HEAD
   field_task_67_book_genres:
     weight: 27
     settings: {  }
     third_party_settings: {  }
     type: options_select
     region: content
+=======
+
+>>>>>>> 55f3495775b168b5b6092ac0978e74d5ea7d5dfd
   path:
     type: path
     weight: 12

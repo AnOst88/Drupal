@@ -5,4 +5,8 @@ dependencies: {  }
 name: thaphameni
 vid: thaphameni
 description: 'Description of thaphameni'
+<<<<<<< HEAD
 weight: 13
+=======
+weight: 12
+>>>>>>> 55f3495775b168b5b6092ac0978e74d5ea7d5dfd

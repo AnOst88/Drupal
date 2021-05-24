@@ -21,8 +21,18 @@ settings:
   file_directory: '[date:custom:Y]-[date:custom:m]'
   file_extensions: 'png gif jpg jpeg'
   max_filesize: ''
+<<<<<<< HEAD
   max_resolution: 134x134
   min_resolution: 134x134
+=======
+
+  max_resolution: 134x134
+  min_resolution: 134x134
+
+  max_resolution: ''
+  min_resolution: ''
+
+>>>>>>> 55f3495775b168b5b6092ac0978e74d5ea7d5dfd
   alt_field: true
   alt_field_required: true
   title_field: false

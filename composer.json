@@ -19,11 +19,17 @@
         "php": ">=7.0.8",
         "composer/installers": "^1.2",
         "cweagans/composer-patches": "^1.6.5",
+        "drupal/admin_toolbar": "^3.0",
         "drupal/console": "^1.0.2",
         "drupal/core": "^8.8.0",
         "drupal/core-composer-scaffold": "^8.8.0",
+<<<<<<< HEAD
         "drupal/embed": "^1.4",
         "drupal/views_field_view": "^1.0@beta",
+=======
+        "drupal/devel": "^4.0",
+        "drupal/module_filter": "^3.2",
+>>>>>>> 55f3495775b168b5b6092ac0978e74d5ea7d5dfd
         "drush/drush": "^9.7.1 | ^10.0.0",
         "vlucas/phpdotenv": "^4.0",
         "webflo/drupal-finder": "^1.0.0",

@@ -5,4 +5,8 @@ dependencies: {  }
 name: uokuc
 vid: uokuc
 description: 'Description of uokuc'
+<<<<<<< HEAD
 weight: 21
+=======
+weight: 20
+>>>>>>> 55f3495775b168b5b6092ac0978e74d5ea7d5dfd

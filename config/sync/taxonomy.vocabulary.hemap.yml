@@ -5,4 +5,8 @@ dependencies: {  }
 name: hemap
 vid: hemap
 description: 'Description of hemap'
+<<<<<<< HEAD
 weight: 9
+=======
+weight: 8
+>>>>>>> 55f3495775b168b5b6092ac0978e74d5ea7d5dfd
