@@ -5,8 +5,8 @@ dependencies: {  }
 name: navudrapro
 vid: navudrapro
 description: 'Description of navudrapro'
-<<<<<<< HEAD
+
 weight: 16
-=======
+
 weight: 15
->>>>>>> 55f3495775b168b5b6092ac0978e74d5ea7d5dfd
+
