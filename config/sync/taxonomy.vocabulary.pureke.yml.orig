@@ -1,0 +1,20 @@
+uuid: 47a5017a-a8bb-4a88-b72e-26ddef6afa8c
+langcode: und
+status: true
+dependencies: {  }
+name: pureke
+vid: pureke
+description: 'Description of pureke'
+<<<<<<< HEAD
+<<<<<<< HEAD
+weight: 1
+=======
+weight: 0
+>>>>>>> 55f3495775b168b5b6092ac0978e74d5ea7d5dfd
+=======
+
+weight: 1
+
+weight: 0
+
+>>>>>>> main

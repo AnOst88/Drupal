@@ -1,0 +1,20 @@
+uuid: 3c83d6b8-76f7-4f92-be12-381d1521b4e8
+langcode: und
+status: true
+dependencies: {  }
+name: navudrapro
+vid: navudrapro
+description: 'Description of navudrapro'
+<<<<<<< HEAD
+<<<<<<< HEAD
+weight: 16
+=======
+weight: 15
+>>>>>>> 55f3495775b168b5b6092ac0978e74d5ea7d5dfd
+=======
+
+weight: 16
+
+weight: 15
+
+>>>>>>> main

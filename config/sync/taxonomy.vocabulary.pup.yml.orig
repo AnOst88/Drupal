@@ -1,0 +1,20 @@
+uuid: 7d7728de-167b-4d2d-b941-ad2af6c90351
+langcode: und
+status: true
+dependencies: {  }
+name: pup
+vid: pup
+description: 'Description of pup'
+<<<<<<< HEAD
+<<<<<<< HEAD
+weight: 11
+=======
+weight: 10
+>>>>>>> 55f3495775b168b5b6092ac0978e74d5ea7d5dfd
+=======
+
+weight: 11
+
+weight: 10
+
+>>>>>>> main

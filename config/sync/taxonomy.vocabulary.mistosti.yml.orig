@@ -6,8 +6,15 @@ name: mistosti
 vid: mistosti
 description: 'Description of mistosti'
 <<<<<<< HEAD
+<<<<<<< HEAD
 weight: 31
 =======
 weight: 30
-
 >>>>>>> 55f3495775b168b5b6092ac0978e74d5ea7d5dfd
+=======
+
+weight: 31
+
+weight: 30
+
+>>>>>>> main

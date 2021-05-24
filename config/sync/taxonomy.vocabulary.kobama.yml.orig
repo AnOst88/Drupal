@@ -1,0 +1,20 @@
+uuid: e015141d-5479-42d4-b424-98dab3953714
+langcode: und
+status: true
+dependencies: {  }
+name: kobama
+vid: kobama
+description: 'Description of kobama'
+<<<<<<< HEAD
+<<<<<<< HEAD
+weight: 30
+=======
+weight: 29
+>>>>>>> 55f3495775b168b5b6092ac0978e74d5ea7d5dfd
+=======
+
+weight: 30
+
+weight: 29
+
+>>>>>>> main

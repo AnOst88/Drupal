@@ -1,0 +1,20 @@
+uuid: f7222417-390d-4bbf-89e4-7aad39dfcd48
+langcode: und
+status: true
+dependencies: {  }
+name: rauastud
+vid: rauastud
+description: 'Description of rauastud'
+<<<<<<< HEAD
+<<<<<<< HEAD
+weight: 26
+=======
+weight: 25
+>>>>>>> 55f3495775b168b5b6092ac0978e74d5ea7d5dfd
+=======
+
+weight: 26
+
+weight: 25
+
+>>>>>>> main

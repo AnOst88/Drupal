@@ -1,0 +1,20 @@
+uuid: 450feb47-1a2d-49e0-a427-7f24c3745c46
+langcode: und
+status: true
+dependencies: {  }
+name: uokuc
+vid: uokuc
+description: 'Description of uokuc'
+<<<<<<< HEAD
+<<<<<<< HEAD
+weight: 21
+=======
+weight: 20
+>>>>>>> 55f3495775b168b5b6092ac0978e74d5ea7d5dfd
+=======
+
+weight: 21
+
+weight: 20
+
+>>>>>>> main

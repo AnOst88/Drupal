@@ -1,0 +1,20 @@
+uuid: eaa3621a-3b16-4822-9fb4-4f6a830554a8
+langcode: und
+status: true
+dependencies: {  }
+name: uef
+vid: uef
+description: 'Description of uef'
+<<<<<<< HEAD
+<<<<<<< HEAD
+weight: 20
+=======
+weight: 19
+>>>>>>> 55f3495775b168b5b6092ac0978e74d5ea7d5dfd
+=======
+
+weight: 20
+
+weight: 19
+
+>>>>>>> main

@@ -1,0 +1,23 @@
+uuid: 3340710f-36d3-4c03-b963-e08a18b3f031
+langcode: en
+status: true
+dependencies: {  }
+name: Country
+vid: country
+description: 'Country list'
+<<<<<<< HEAD
+weight: -29
+=======
+
+weight: -29
+
+
+weight: -29
+
+weight: 0
+
+<<<<<<< HEAD
+>>>>>>> 55f3495775b168b5b6092ac0978e74d5ea7d5dfd
+=======
+
+>>>>>>> main

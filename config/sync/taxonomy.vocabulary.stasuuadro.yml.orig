@@ -1,0 +1,20 @@
+uuid: e993e3dd-6209-4726-9099-9eefe555305d
+langcode: und
+status: true
+dependencies: {  }
+name: stasuuadro
+vid: stasuuadro
+description: 'Description of stasuuadro'
+<<<<<<< HEAD
+<<<<<<< HEAD
+weight: 19
+=======
+weight: 18
+>>>>>>> 55f3495775b168b5b6092ac0978e74d5ea7d5dfd
+=======
+
+weight: 19
+
+weight: 18
+
+>>>>>>> main

@@ -1,0 +1,20 @@
+uuid: b8f2c963-53b5-41cf-a9e3-d2bee41d9e5b
+langcode: und
+status: true
+dependencies: {  }
+name: shabr
+vid: shabr
+description: 'Description of shabr'
+<<<<<<< HEAD
+<<<<<<< HEAD
+weight: 12
+=======
+weight: 11
+>>>>>>> 55f3495775b168b5b6092ac0978e74d5ea7d5dfd
+=======
+
+weight: 12
+
+weight: 11
+
+>>>>>>> main

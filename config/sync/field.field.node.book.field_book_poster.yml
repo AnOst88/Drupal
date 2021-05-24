@@ -29,6 +29,10 @@ settings:
   max_resolution: 134x134
   min_resolution: 134x134
 
+
+  max_resolution: 134x134
+  min_resolution: 134x134
+
   max_resolution: ''
   min_resolution: ''
 

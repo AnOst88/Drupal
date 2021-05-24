@@ -1,0 +1,20 @@
+uuid: 3003a017-8516-4d4b-84ad-648a05fe9629
+langcode: und
+status: true
+dependencies: {  }
+name: dechub
+vid: dechub
+description: 'Description of dechub'
+<<<<<<< HEAD
+<<<<<<< HEAD
+weight: 28
+=======
+weight: 27
+>>>>>>> 55f3495775b168b5b6092ac0978e74d5ea7d5dfd
+=======
+
+weight: 28
+
+weight: 27
+
+>>>>>>> main
