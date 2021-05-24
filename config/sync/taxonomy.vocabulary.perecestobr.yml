@@ -5,8 +5,7 @@ dependencies: {  }
 name: perecestobr
 vid: perecestobr
 description: 'Description of perecestobr'
-<<<<<<< HEAD
+
 weight: 6
-=======
+
 weight: 5
->>>>>>> 55f3495775b168b5b6092ac0978e74d5ea7d5dfd
