@@ -1,0 +1,8 @@
+uuid: 7b5d142c-fec3-4a90-a816-340cf492e842
+langcode: und
+status: true
+dependencies: {  }
+name: jupruku
+vid: jupruku
+description: 'Description of jupruku'
+weight: -1

@@ -1,0 +1,8 @@
+uuid: 7a8db1c6-7abd-4242-896a-21d31066f669
+langcode: en
+status: true
+dependencies: {  }
+name: 'Task67 Book Genre'
+vid: task67_book_genre
+description: task67
+weight: -35

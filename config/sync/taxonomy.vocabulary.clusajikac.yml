@@ -1,0 +1,8 @@
+uuid: 92f07378-cf74-457a-ba73-930ab2e68f25
+langcode: und
+status: true
+dependencies: {  }
+name: clusajikac
+vid: clusajikac
+description: 'Description of clusajikac'
+weight: 24

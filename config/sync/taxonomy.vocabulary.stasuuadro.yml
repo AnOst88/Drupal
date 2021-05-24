@@ -1,0 +1,8 @@
+uuid: e993e3dd-6209-4726-9099-9eefe555305d
+langcode: und
+status: true
+dependencies: {  }
+name: stasuuadro
+vid: stasuuadro
+description: 'Description of stasuuadro'
+weight: 19

@@ -1,0 +1,25 @@
+uuid: 40f65c44-a664-4f5b-bc2c-11f964a7de24
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_book_circulation
+    - node.type.book
+id: node.book.field_book_circulation
+field_name: field_book_circulation
+entity_type: node
+bundle: book
+label: Circulation
+description: 'Book circulation'
+required: true
+translatable: false
+default_value:
+  -
+    value: 24
+default_value_callback: ''
+settings:
+  min: null
+  max: null
+  prefix: ''
+  suffix: ''
+field_type: integer

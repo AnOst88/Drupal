@@ -1,0 +1,8 @@
+uuid: 1d4583a3-2543-4728-9c93-370caa387fa1
+langcode: und
+status: true
+dependencies: {  }
+name: girepowibre
+vid: girepowibre
+description: 'Description of girepowibre'
+weight: 29
