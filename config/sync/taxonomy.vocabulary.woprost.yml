@@ -5,8 +5,8 @@ dependencies: {  }
 name: woprost
 vid: woprost
 description: 'Description of woprost'
-<<<<<<< HEAD
+
 weight: 27
-=======
+
 weight: 26
->>>>>>> 55f3495775b168b5b6092ac0978e74d5ea7d5dfd
+
