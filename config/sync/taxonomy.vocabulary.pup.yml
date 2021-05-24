@@ -5,8 +5,8 @@ dependencies: {  }
 name: pup
 vid: pup
 description: 'Description of pup'
-<<<<<<< HEAD
+
 weight: 11
-=======
+
 weight: 10
->>>>>>> 55f3495775b168b5b6092ac0978e74d5ea7d5dfd
+
