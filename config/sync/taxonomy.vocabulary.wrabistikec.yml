@@ -5,8 +5,8 @@ dependencies: {  }
 name: wrabistikec
 vid: wrabistikec
 description: 'Description of wrabistikec'
-<<<<<<< HEAD
+
 weight: 23
-=======
+
 weight: 22
->>>>>>> 55f3495775b168b5b6092ac0978e74d5ea7d5dfd
+
