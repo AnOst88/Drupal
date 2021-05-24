@@ -5,8 +5,8 @@ dependencies: {  }
 name: wad
 vid: wad
 description: 'Description of wad'
-<<<<<<< HEAD
+
 weight: 33
-=======
+
 weight: 32
->>>>>>> 55f3495775b168b5b6092ac0978e74d5ea7d5dfd
+
