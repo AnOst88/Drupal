@@ -5,8 +5,8 @@ dependencies: {  }
 name: dechub
 vid: dechub
 description: 'Description of dechub'
-<<<<<<< HEAD
+
 weight: 28
-=======
+
 weight: 27
->>>>>>> 55f3495775b168b5b6092ac0978e74d5ea7d5dfd
+
