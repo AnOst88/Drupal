@@ -5,8 +5,7 @@ dependencies: {  }
 name: uef
 vid: uef
 description: 'Description of uef'
-<<<<<<< HEAD
+
 weight: 20
-=======
+
 weight: 19
->>>>>>> 55f3495775b168b5b6092ac0978e74d5ea7d5dfd
