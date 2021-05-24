@@ -9,15 +9,13 @@ ui:
     performance_statistics: false
     preview_information: true
     sql_query:
-<<<<<<< HEAD
+
       enabled: true
-=======
 
       enabled: true
 
       enabled: false
 
->>>>>>> 55f3495775b168b5b6092ac0978e74d5ea7d5dfd
       where: above
     display_embed: false
   always_live_preview: true
