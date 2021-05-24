@@ -5,4 +5,8 @@ dependencies: {  }
 name: shabr
 vid: shabr
 description: 'Description of shabr'
+
 weight: 12
+
+weight: 11
+
