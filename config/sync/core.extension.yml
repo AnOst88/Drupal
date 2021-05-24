@@ -15,18 +15,18 @@ module:
   datetime_range: 0
   dblog: 0
   devel: 0
-<<<<<<< HEAD
+
   devel_generate: 0
   dynamic_page_cache: 0
   editor: 0
   embed: 0
-=======
+
 
   devel_generate: 0
 
   dynamic_page_cache: 0
   editor: 0
->>>>>>> 55f3495775b168b5b6092ac0978e74d5ea7d5dfd
+
   field: 0
   field_ui: 0
   file: 0
@@ -37,13 +37,12 @@ module:
   link: 0
   menu_link_content: 0
   menu_ui: 0
-<<<<<<< HEAD
-  module_filter: 0
-=======
 
   module_filter: 0
 
->>>>>>> 55f3495775b168b5b6092ac0978e74d5ea7d5dfd
+
+  module_filter: 0
+
   node: 0
   options: 0
   page_cache: 0
@@ -60,10 +59,9 @@ module:
   tour: 0
   update: 0
   user: 0
-<<<<<<< HEAD
+
   views_field_view: 0
-=======
->>>>>>> 55f3495775b168b5b6092ac0978e74d5ea7d5dfd
+
   views_ui: 0
   views: 10
   standard: 1000
