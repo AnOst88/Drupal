@@ -1,0 +1,8 @@
+uuid: 004ea0b6-58cb-4707-badd-114800e92a59
+langcode: und
+status: true
+dependencies: {  }
+name: bokarugoslas
+vid: bokarugoslas
+description: 'Description of bokarugoslas'
+weight: -3

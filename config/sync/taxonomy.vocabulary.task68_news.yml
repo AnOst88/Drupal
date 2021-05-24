@@ -1,0 +1,8 @@
+uuid: ddca2811-a06a-4d5c-bfb7-f95e76866208
+langcode: en
+status: true
+dependencies: {  }
+name: task68_News
+vid: task68_news
+description: task68
+weight: -32

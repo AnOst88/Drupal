@@ -1,0 +1,8 @@
+uuid: fb6ad7a2-bc00-4b69-bb00-de81f74e43ee
+langcode: und
+status: true
+dependencies: {  }
+name: jachacifra
+vid: jachacifra
+description: 'Description of jachacifra'
+weight: 9
