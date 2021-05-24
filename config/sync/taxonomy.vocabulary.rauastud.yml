@@ -5,8 +5,8 @@ dependencies: {  }
 name: rauastud
 vid: rauastud
 description: 'Description of rauastud'
-<<<<<<< HEAD
+
 weight: 26
-=======
+
 weight: 25
->>>>>>> 55f3495775b168b5b6092ac0978e74d5ea7d5dfd
+
