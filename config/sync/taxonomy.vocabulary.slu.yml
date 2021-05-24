@@ -1,0 +1,8 @@
+uuid: 1d19380f-b86a-4d73-8304-7341833460f3
+langcode: und
+status: true
+dependencies: {  }
+name: slu
+vid: slu
+description: 'Description of slu'
+weight: 32

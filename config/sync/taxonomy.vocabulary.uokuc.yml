@@ -1,0 +1,8 @@
+uuid: 450feb47-1a2d-49e0-a427-7f24c3745c46
+langcode: und
+status: true
+dependencies: {  }
+name: uokuc
+vid: uokuc
+description: 'Description of uokuc'
+weight: 21

@@ -1,0 +1,8 @@
+uuid: 3810263d-4194-4c9f-9e4d-47da833439c6
+langcode: und
+status: true
+dependencies: {  }
+name: clashufrel
+vid: clashufrel
+description: 'Description of clashufrel'
+weight: -14

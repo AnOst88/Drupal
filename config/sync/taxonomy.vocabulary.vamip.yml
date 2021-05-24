@@ -1,0 +1,8 @@
+uuid: 4dfa4401-8707-48b5-a7b7-2646bbd04b28
+langcode: und
+status: true
+dependencies: {  }
+name: vamip
+vid: vamip
+description: 'Description of vamip'
+weight: 3

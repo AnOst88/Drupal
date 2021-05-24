@@ -1,0 +1,8 @@
+uuid: 44ba815b-9952-4b97-9b5d-daeac8f55e24
+langcode: und
+status: true
+dependencies: {  }
+name: claw
+vid: claw
+description: 'Description of claw'
+weight: -30

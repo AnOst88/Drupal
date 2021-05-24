@@ -1,0 +1,38 @@
+uuid: c6686f4b-5fd7-4c01-afab-6b650c9f166a
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_book_poster
+    - node.type.book
+  module:
+    - image
+id: node.book.field_book_poster
+field_name: field_book_poster
+entity_type: node
+bundle: book
+label: 'Book poster'
+description: ''
+required: true
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings:
+  file_directory: '[date:custom:Y]-[date:custom:m]'
+  file_extensions: 'png gif jpg jpeg'
+  max_filesize: ''
+  max_resolution: 134x134
+  min_resolution: 134x134
+  alt_field: true
+  alt_field_required: true
+  title_field: false
+  title_field_required: false
+  default_image:
+    uuid: 1ee1961d-9d9a-4805-b578-775956919f4c
+    alt: ''
+    title: ''
+    width: 667
+    height: 1000
+  handler: 'default:file'
+  handler_settings: {  }
+field_type: image

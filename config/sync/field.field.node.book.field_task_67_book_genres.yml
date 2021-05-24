@@ -1,0 +1,29 @@
+uuid: e13a5e03-f5da-48dd-bf46-9cd1a1be95a8
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_task_67_book_genres
+    - node.type.book
+    - taxonomy.vocabulary.task67_book_genre
+id: node.book.field_task_67_book_genres
+field_name: field_task_67_book_genres
+entity_type: node
+bundle: book
+label: 'Task 67 Book genres '
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings:
+  handler: 'default:taxonomy_term'
+  handler_settings:
+    target_bundles:
+      task67_book_genre: task67_book_genre
+    sort:
+      field: name
+      direction: asc
+    auto_create: false
+    auto_create_bundle: ''
+field_type: entity_reference

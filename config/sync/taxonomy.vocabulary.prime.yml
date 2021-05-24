@@ -1,0 +1,8 @@
+uuid: e598c0f5-da63-4af6-8ad3-7291e7b2283b
+langcode: und
+status: true
+dependencies: {  }
+name: prime
+vid: prime
+description: 'Description of prime'
+weight: 17
