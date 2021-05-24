@@ -5,8 +5,7 @@ dependencies: {  }
 name: wrupraphusle
 vid: wrupraphusle
 description: 'Description of wrupraphusle'
-<<<<<<< HEAD
+
 weight: 34
-=======
-weight: 33
->>>>>>> 55f3495775b168b5b6092ac0978e74d5ea7d5dfd
+
+
