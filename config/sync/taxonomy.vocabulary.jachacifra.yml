@@ -5,8 +5,4 @@ dependencies: {  }
 name: jachacifra
 vid: jachacifra
 description: 'Description of jachacifra'
-
 weight: 10
-
-weight: 9
-

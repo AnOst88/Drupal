@@ -5,8 +5,4 @@ dependencies: {  }
 name: stasuuadro
 vid: stasuuadro
 description: 'Description of stasuuadro'
-
 weight: 19
-
-weight: 18
-

@@ -5,8 +5,4 @@ dependencies: {  }
 name: vamip
 vid: vamip
 description: 'Description of vamip'
-
 weight: 3
-
-weight: 2
-

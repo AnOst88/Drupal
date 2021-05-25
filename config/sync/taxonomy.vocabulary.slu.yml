@@ -5,8 +5,4 @@ dependencies: {  }
 name: slu
 vid: slu
 description: 'Description of slu'
-
 weight: 32
-
-weight: 31
-

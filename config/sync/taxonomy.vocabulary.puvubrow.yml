@@ -5,8 +5,4 @@ dependencies: {  }
 name: puvubrow
 vid: puvubrow
 description: 'Description of puvubrow'
-
 weight: 8
-
-weight: 7
-
