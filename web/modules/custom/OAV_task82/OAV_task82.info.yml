@@ -1,0 +1,5 @@
+name: OAV_task82
+description: First custom module
+core: 8.x
+type: module
+package: OAV_task82
