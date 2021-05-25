@@ -5,8 +5,4 @@ dependencies: {  }
 name: hemap
 vid: hemap
 description: 'Description of hemap'
-
 weight: 9
-
-weight: 8
-
