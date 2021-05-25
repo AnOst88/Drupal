@@ -1,0 +1,15 @@
+uuid: 8924126d-a9f9-47b7-a7a9-496971a0b190
+langcode: en
+status: true
+dependencies: {  }
+name: task22_book_134_134
+label: 'Task22 Book 134×134'
+effects:
+  8baa21c3-c933-462b-8738-d92d8487e121:
+    uuid: 8baa21c3-c933-462b-8738-d92d8487e121
+    id: image_scale_and_crop
+    weight: 1
+    data:
+      width: 134
+      height: 134
+      anchor: center-center

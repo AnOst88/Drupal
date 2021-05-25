@@ -1,0 +1,8 @@
+uuid: 345c8004-7f08-4ac4-aa1f-1f8b4b0f7a5c
+langcode: und
+status: true
+dependencies: {  }
+name: wrupraphusle
+vid: wrupraphusle
+description: 'Description of wrupraphusle'
+weight: 34

@@ -1,0 +1,8 @@
+uuid: 4a9b4bc8-e462-48a0-a9b4-de8e312f7106
+langcode: und
+status: true
+dependencies: {  }
+name: thustup
+vid: thustup
+description: 'Description of thustup'
+weight: 14

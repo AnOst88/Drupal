@@ -1,0 +1,8 @@
+uuid: 115432d6-d157-46fb-81c4-e467ef34fc30
+langcode: und
+status: true
+dependencies: {  }
+name: fruhe
+vid: fruhe
+description: 'Description of fruhe'
+weight: -22
