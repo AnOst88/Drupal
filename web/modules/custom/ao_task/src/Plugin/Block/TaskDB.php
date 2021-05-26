@@ -20,22 +20,24 @@ class TaskDB extends BlockBase {
   public function build() {
 
     $query = \Drupal::database()->select('node_field_data', 'nfd');
-    $query->fields('nfd', array('title', 'nid', 'created'));
-    $query->orderBy('nfd', 'DESC');
-    $query->range(0, 2);
+    $query->fields('nfd', ['title', 'nid', 'created']);
+    $query->condition('nfd.type', 'article');
+    $query->range(0, 10);
 
-    $db_list = $query->execute()->fetchAll();
+    $db_list = $query->execute()->fetchAll(\PDO::FETCH_ASSOC);
 
+    foreach($db_list as $key => $item) {
+      $db_list[$key] = $item;
+    }
+    
     $header = ['Title', 'ID', 'Created'];
-    $data = [
-      $db_list,
-    ];
 
+    
     $output[] = array(
       '#theme' => 'table',
       '#caption' => 'The table caption / Title',
       '#header' => $header,
-      '#rows' => $data,
+      '#rows' => $db_list,
     );
 
     return  $output;
