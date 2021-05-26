@@ -14,7 +14,7 @@ provider: null
 plugin: task_db
 settings:
   id: task_db
-  label: 'Task db'
+  label: 'Task Data Base '
   provider: ao_task
   label_display: visible
 visibility: {  }
