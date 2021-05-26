@@ -21,13 +21,14 @@ class TaskDB extends BlockBase {
 
     $query = \Drupal::database()->select('node_field_data', 'nfd');
     $query->fields('nfd', array('title', 'nid', 'created'));
-    $query->condition('nfd.nid', 2);
-    
-    $object = $query->execute()->fetchAssoc();
+    $query->orderBy('nfd', 'DESC');
+    $query->range(0, 2);
+
+    $db_list = $query->execute()->fetchAll();
 
     $header = ['Title', 'ID', 'Created'];
     $data = [
-      $object,
+      $db_list,
     ];
 
     $output[] = array(
