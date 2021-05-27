@@ -1,0 +1,20 @@
+uuid: 3d143132-d455-49af-ad75-4596fbfdfe4f
+langcode: en
+status: true
+dependencies:
+  module:
+    - ao_task
+  theme:
+    - bartik
+id: taskblock
+theme: bartik
+region: sidebar_first
+weight: 0
+provider: null
+plugin: task_block
+settings:
+  id: task_block
+  label: 'Task block'
+  provider: ao_task
+  label_display: visible
+visibility: {  }

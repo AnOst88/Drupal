@@ -5,8 +5,4 @@ dependencies: {  }
 name: mistosti
 vid: mistosti
 description: 'Description of mistosti'
-
 weight: 31
-
-weight: 30
-

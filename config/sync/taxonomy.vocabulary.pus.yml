@@ -5,8 +5,4 @@ dependencies: {  }
 name: pus
 vid: pus
 description: 'Description of pus'
-
 weight: 7
-
-weight: 6
-

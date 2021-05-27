@@ -1,0 +1,42 @@
+<?php
+
+/**
+ * @file
+ * Contains ao_task.module.
+ */
+
+use Drupal\Core\Routing\RouteMatchInterface;
+
+/**
+ * Implements hook_help().
+ */
+function ao_task_help($route_name, RouteMatchInterface $route_match) {
+  switch ($route_name) {
+    // Main module help for the ao_task module.
+    case 'help.page.ao_task':
+      $output = '';
+      $output .= '<h3>' . t('About') . '</h3>';
+      $output .= '<p>' . t('My Awesome Module') . '</p>';
+      return $output;
+
+    default:
+  }
+}
+
+function ao_task_theme($existing, $type, $theme, $path){
+  return [
+    'ao_example_first' => [
+      'variables' =>[],
+    ],
+  ];
+}
+
+/**
+ * Implements hook
+ */
+function template_preprocess_ao_example_first(&$variables){
+  $time = \Drupal::time()->getRequestTime();
+  $date_formatter = \Drupal::service('date.formatter');
+  $variables['date'] = $date_formatter->format($time);
+  $variables['hello'] = 'Hello World';
+}

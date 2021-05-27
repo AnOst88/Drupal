@@ -5,8 +5,4 @@ dependencies: {  }
 name: prime
 vid: prime
 description: 'Description of prime'
-
 weight: 17
-
-weight: 16
-
