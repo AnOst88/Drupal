@@ -32,7 +32,13 @@ module:
   menu_link_content: 0
   menu_ui: 0
   module_filter: 0
+<<<<<<< HEAD
   newmyblock: 0
+=======
+
+  newmyblock: 0
+
+>>>>>>> 962d6f975e091454014e1b1264a8643f036abbfc
   node: 0
   options: 0
   page_cache: 0
