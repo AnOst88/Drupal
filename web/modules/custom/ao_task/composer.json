@@ -1,0 +1,13 @@
+{
+    "name": "ao_task",
+    "type": "drupal-module",
+    "description": "My Awesome Module",
+    "keywords": [
+    ],
+    "homepage": "https://www.drupal.org/project/ao_task",
+    "minimum-stability": "dev",
+    "support": {
+        "issues": "https://www.drupal.org/project/issues/ao_task",
+        "source": "http://cgit.drupalcode.org/ao_task",
+    },
+}

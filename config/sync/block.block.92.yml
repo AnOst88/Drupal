@@ -1,0 +1,18 @@
+uuid: a2e479ec-a795-45c0-b645-7d90618166d0
+langcode: en
+status: true
+dependencies:
+  theme:
+    - bartik
+id: '92'
+theme: bartik
+region: sidebar_first
+weight: null
+provider: null
+plugin: '92'
+settings:
+  id: broken
+  label: ''
+  provider: core
+  label_display: visible
+visibility: {  }
