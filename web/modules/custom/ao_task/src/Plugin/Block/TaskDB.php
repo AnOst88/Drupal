@@ -26,12 +26,8 @@ class TaskDB extends BlockBase {
 
     $db_list = $query->execute()->fetchAll(\PDO::FETCH_ASSOC);
 
-    foreach($db_list as $key => $item) {
-      $db_list[$key] = $item;
-    }
     
     $header = ['Title', 'ID', 'Created'];
-
     
     $output[] = array(
       '#theme' => 'table',
