@@ -27,7 +27,10 @@ function ao_task_help($route_name, RouteMatchInterface $route_match) {
 function ao_task_theme($existing, $type, $theme, $path){
   return [
     'ao_example_first' => [
-      'variables' =>[], 
+      'variables' =>[
+        'var1' => NULL,
+        'var2' => NULL,
+      ], 
     ],
   ];
 }

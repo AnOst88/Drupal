@@ -20,7 +20,9 @@ class TaskTwig extends BlockBase {
   public function build() {
 
      $build['our_example'] = [ 
-      '#theme' => 'ao_example_first',
+     '#theme' => 'ao_example_first',
+     '#var1' => '123',
+     '#var2' => 'abc',
     ];
 
     return $build;
