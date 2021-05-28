@@ -1,0 +1,5 @@
+name: custom form
+description: task 93 custom form
+type: module
+core: 8.x
+package: 'Custom'
