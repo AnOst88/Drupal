@@ -1,0 +1,6 @@
+name: Task94_IncluedeJs/Time
+description: task94 JS/Time
+core: 8.x
+type: module
+package: task_js
+

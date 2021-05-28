@@ -1,0 +1,6 @@
+task_js:
+  version: 1.x
+  js:
+    js/task_include.js: {}
+  dependencies:
+    - core/jquery

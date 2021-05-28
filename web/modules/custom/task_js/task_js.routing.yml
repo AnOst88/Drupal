@@ -1,0 +1,7 @@
+task_js.include_js:
+  path: 'include'
+  defaults: 
+    _controller: '\Drupal\task_js\Controller\IncludeJS::content'
+    _title: 'Include JS/Time-Block'
+  requirements:
+    _permission: 'access content'

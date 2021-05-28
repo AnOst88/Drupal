@@ -1,0 +1,39 @@
+<?php
+
+/**
+ * @file
+ * Contains ao_task.module.
+ */
+
+use Drupal\Core\Routing\RouteMatchInterface;
+
+/**
+ * Implements hook_help().
+ */
+/**
+ * Implements hook_help().
+ */
+function task_js_help($route_name, RouteMatchInterface $route_match) {
+  switch ($route_name) {
+    // Main module help for the ao_task module.
+    case 'help.page.ao_task':
+      $output = '';
+      $output .= '<h3>' . t('About') . '</h3>';
+      $output .= '<p>' . t('My Awesome Module') . '</p>';
+      return $output;
+
+    default:
+  }
+}
+
+function task_js_theme($existing, $type, $theme, $path){
+  return [
+    'task_js' => [
+      'variables' =>[
+        'date' => NULL,
+      ], 
+    ],
+  ];
+}
+
+
