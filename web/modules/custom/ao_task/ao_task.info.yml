@@ -1,3 +1,4 @@
+configure: ao_task.admin_settings
 name: 'ao_task'
 type: module
 description: 'My Awesome Module'

@@ -4,6 +4,12 @@ drupal2.example_first:
     _controller: '\Drupal\ao_task\Controller\HookThemeExample::build'
     _title: 'Twig'
   requirements:
-
     _permission: 'access content'
 
+ao_task.admin_settings:
+  path: 'example-first'
+  defaults:
+    _form: '\Drupal\ao_task\Form\ModuleConfigurationForm'
+    _title: 'Base Form task93'
+  requirements:
+    _permission: 'administer site configuration'

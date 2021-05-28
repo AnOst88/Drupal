@@ -7,7 +7,7 @@ dependencies:
 id: '92'
 theme: bartik
 region: sidebar_first
-weight: null
+weight: -12
 provider: null
 plugin: '92'
 settings:

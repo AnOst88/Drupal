@@ -1,4 +1,4 @@
-uuid: f7d4f3cf-b321-498c-a91f-aa87d63d1f57
+uuid: c299ef97-7d39-4755-86b5-4eafd82736ae
 langcode: en
 status: true
 dependencies:
@@ -6,15 +6,15 @@ dependencies:
     - ao_task
   theme:
     - bartik
-id: taskdb
+id: confbaseform
 theme: bartik
-region: content
+region: sidebar_first
 weight: 0
 provider: null
-plugin: task_db
+plugin: conf_base_form
 settings:
-  id: task_db
-  label: 'Task Data Base '
+  id: conf_base_form
+  label: 'Conf base form'
   provider: ao_task
   label_display: visible
 visibility: {  }

@@ -1,0 +1,7 @@
+custom_form.custom_form:
+  path: '/admin/config/custom_form/settings'
+  defaults:
+    _form: '\Drupal\custom_form\Form\CustomForm'
+    _title: 'Custom settings form'
+  requirements:
+    _permission: 'administer site configuration'
