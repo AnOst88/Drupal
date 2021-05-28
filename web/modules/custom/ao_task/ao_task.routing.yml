@@ -1,5 +1,5 @@
 drupal2.example_first:
-  path: 'example-first'
+  path: 'example-first' 
   defaults: 
     _controller: '\Drupal\ao_task\Controller\HookThemeExample::build'
     _title: 'Twig'
