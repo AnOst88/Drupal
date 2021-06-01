@@ -18,11 +18,7 @@ class AjaxController extends ControllerBase
         $query->condition('nfd.type', 'article');
         $list = $query->countQuery()->execute()->fetchField();
 
-        $output = sprintf(
-            '<div 
-        class="node-short-info">
-        <div class="node-short-info-title">Count node:%s</div>
-        </div>',
+        $output = sprintf('<div class="node-short-info"><div class="node-short-info-title">Count node:%s</div></div>',
             $list,
             $node->getOwner()->getDisplayName(),
         );
