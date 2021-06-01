@@ -37,3 +37,5 @@ function ajax_popup_node_view(array &$build, EntityInterface $entity, EntityView
         $build['short_info']['#markup'] = '<div class="field field-extra-short-info">' . $link . '</div>';
     }
 }
+
+

@@ -28,3 +28,4 @@ class AjaxController extends ControllerBase {
         return $render;
     }
 }
+
