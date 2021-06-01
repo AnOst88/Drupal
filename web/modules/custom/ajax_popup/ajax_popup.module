@@ -43,7 +43,7 @@ function ajax_popup_node_view(array &$build, EntityInterface $entity, EntityView
 function ajax_popup_theme($existing, $type, $theme, $path) {
   return [
     'ajax_popup' => [
-    'variables' => ['count_node' => NULL],
+      'variables' => ['count_node' => NULL],
     ],
   ];
 }

@@ -17,12 +17,12 @@ class AjaxController extends ControllerBase {
     $list = $query->countQuery()->execute()->fetchField();
     $output = sprintf(
       $list,
-      );
+    );
     $render = [
       '#theme' => 'ajax_popup',
       '#count_node' => $list,
       '#type' => 'inline_template',
-      ];
+    ];
     return $render;
-    }
+  }
 }
