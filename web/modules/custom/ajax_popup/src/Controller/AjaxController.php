@@ -8,11 +8,9 @@ use Drupal\node\NodeInterface;
 /**
  * Provides Ajax Controller.
  */
-class AjaxController extends ControllerBase
-{
+class AjaxController extends ControllerBase {
 
-    public function index(NodeInterface $node)
-    {
+    public function index(NodeInterface $node) {
         $query = \Drupal::database()->select('node_field_data', 'nfd');
         $query->fields('nfd', ['nid', 'title']);
         $query->condition('nfd.type', 'article');

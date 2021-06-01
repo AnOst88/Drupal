@@ -2,4 +2,4 @@ name: Ajax popup
 type: module
 description: Ajax popup module
 core: 8.x
-package: 'ajax_popup'
+package: "ajax_popup"

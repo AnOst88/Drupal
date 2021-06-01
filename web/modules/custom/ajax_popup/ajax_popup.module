@@ -14,8 +14,7 @@ use Drupal\Component\Serialization\Json;
 /**
  * Implements hook_entity_type_view.
  */
-function ajax_popup_node_view(array &$build, EntityInterface $entity, EntityViewDisplayInterface $display, $view_mode)
-{
+function ajax_popup_node_view(array &$build, EntityInterface $entity, EntityViewDisplayInterface $display, $view_mode) {
     /** @var \Drupal\node\Entity\Node $node */
     $node = $entity;
     if ($display->getComponent('short_info')) {
