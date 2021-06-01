@@ -18,24 +18,24 @@ function ajax_popup_node_view(array &$build, EntityInterface $entity, EntityView
   /** @var \Drupal\node\Entity\Node $node */
   $node = $entity;
   if ($display->getComponent('short_info')) {
-  $url = Url::fromRoute('ajax_popup.popup', [
-  'node' => $node->id()
-  ]);
+    $url = Url::fromRoute('ajax_popup.popup', [
+      'node' => $node->id()
+    ]);
   $link_options = array(
     'attributes' => array(
-    'class' => array(
+      'class' => array(
       'use-ajax',
       ),
     'data-dialog-type' => 'modal',
     'data-dialog-options' => Json::encode([
       'width' => 360,
-      ]),
+    ]),
     ),
   );
   $url->setOptions($link_options);
   $link = Link::fromTextAndUrl(t('<h3>' . 'Content Info' . '</h3>'), $url)->toString();
   $build['short_info']['#markup'] = '<div class="field field-extra-short-info">' . $link . '</div>';
-  }
+}
 }
 /**
  * Implements hook_theme().
