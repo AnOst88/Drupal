@@ -1,0 +1,12 @@
+ajax_popup.popup:
+  path: '/node/{node}/short-info'
+  defaults:
+    _controller: 'Drupal\ajax_popup\Controller\AjaxController::index'
+    _title: 'Ajax Popup'
+  requirements:
+    _entity_access: 'node.view'
+  options:
+    parameters:
+      node:
+        type: entity:node
+
