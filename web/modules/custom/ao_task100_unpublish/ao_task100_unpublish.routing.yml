@@ -1,0 +1,11 @@
+ao_task100_unpublish.node:
+  path: '/node/{node}/unpublish'
+  defaults:
+    _controller: '\Drupal\ao_task100_unpublish\Controller\NodeUnpublishController::content'
+    _title: 'Node unpublish custom'
+  requirements:
+    _entity_access: 'node.view'
+  options:
+    parameters:
+      node:
+        type: entity:node

@@ -1,0 +1,5 @@
+name: Node unpublish
+type: module
+description: Node unpublish custom module.
+core: 8.x
+package: 'ao_task100_unpublish'
