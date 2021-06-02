@@ -18,7 +18,7 @@ class AjaxController extends ControllerBase {
     $render = [
       '#theme' => 'ajax_popup',
       '#count_node' => $count_node,
-      //'#type' => 'inline_template',
+      '#type' => 'inline_template',
     ];
     return $render;
   }
