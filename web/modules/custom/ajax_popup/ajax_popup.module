@@ -5,8 +5,8 @@
  * Provides ajax popup functionality.
  */
 
-use \Drupal\Core\Entity\Display\EntityViewDisplayInterface;
-use \Drupal\Core\Entity\EntityInterface;
+use Drupal\Core\Entity\Display\EntityViewDisplayInterface;
+use Drupal\Core\Entity\EntityInterface;
 use Drupal\Core\Link;
 use Drupal\Core\Url;
 use Drupal\Component\Serialization\Json;
@@ -16,27 +16,27 @@ use Drupal\Component\Serialization\Json;
  */
 function ajax_popup_node_view(array &$build, EntityInterface $entity, EntityViewDisplayInterface $display, $view_mode) {
   /** @var \Drupal\node\Entity\Node $node */
-  $node = $entity;
   if ($display->getComponent('short_info')) {
     $url = Url::fromRoute('ajax_popup.popup', [
       'node' => $node->id()
     ]);
-  $link_options = array(
-    'attributes' => array(
-      'class' => array(
-      'use-ajax',
-      ),
-    'data-dialog-type' => 'modal',
-    'data-dialog-options' => Json::encode([
-      'width' => 360,
-    ]),
-    ),
-  );
+  $link_options = [
+    'attributes' => [
+      'class' => [
+        'use-ajax',
+      ],
+      'data-dialog-type' => 'modal',
+      'data-dialog-options' => Json::encode([
+        'width' => 360,
+      ]),
+    ],
+  ];
   $url->setOptions($link_options);
   $link = Link::fromTextAndUrl(t('<h3>' . 'Content Info' . '</h3>'), $url)->toString();
   $build['short_info']['#markup'] = '<div class="field field-extra-short-info">' . $link . '</div>';
+  }
 }
-}
+
 /**
  * Implements hook_theme().
  */

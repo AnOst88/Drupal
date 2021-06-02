@@ -14,14 +14,11 @@ class AjaxController extends ControllerBase {
     $query = \Drupal::database()->select('node_field_data', 'nfd');
     $query->fields('nfd', ['nid', 'title']);
     $query->condition('nfd.type', 'article');
-    $list = $query->countQuery()->execute()->fetchField();
-    $output = sprintf(
-      $list,
-    );
+    $count_node = $query->countQuery()->execute()->fetchField();
     $render = [
       '#theme' => 'ajax_popup',
-      '#count_node' => $list,
-      '#type' => 'inline_template',
+      '#count_node' => $count_node,
+      //'#type' => 'inline_template',
     ];
     return $render;
   }
