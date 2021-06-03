@@ -75,9 +75,8 @@ content:
     region: content
     third_party_settings: {  }
   status:
-    type: boolean_checkbox
-    settings:
-      display_label: true
+    type: options_buttons
+    settings: {  }
     weight: 120
     region: content
     third_party_settings: {  }

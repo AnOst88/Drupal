@@ -1,20 +1,20 @@
-uuid: c299ef97-7d39-4755-86b5-4eafd82736ae
+uuid: c2f6d974-0a4e-4214-b882-f36ab1c7e126
 langcode: en
 status: true
 dependencies:
   module:
-    - ao_task
+    - task_js
   theme:
     - bartik
-id: confbaseform
+id: jscssinclud
 theme: bartik
 region: sidebar_first
 weight: 0
 provider: null
-plugin: conf_base_form
+plugin: js_css_includ
 settings:
-  id: conf_base_form
-  label: 'Conf base form'
-  provider: ao_task
+  id: js_css_includ
+  label: 'JS/Time-Block include'
+  provider: task_js
   label_display: visible
 visibility: {  }

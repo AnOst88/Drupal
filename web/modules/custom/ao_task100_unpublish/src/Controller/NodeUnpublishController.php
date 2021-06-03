@@ -18,6 +18,6 @@ class NodeUnpublishController extends ControllerBase {
     $node->setPublished(false);
     $node->save();
     $response->addCommand(new AlertCommand('Post ' . $node->getTitle() . ' unpublished'));
-  return $response;
+    return $response;
   }
 }
