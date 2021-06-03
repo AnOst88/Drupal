@@ -16,6 +16,7 @@ use Drupal\Component\Serialization\Json;
  */
 function ajax_popup_node_view(array &$build, EntityInterface $entity, EntityViewDisplayInterface $display, $view_mode) {
   /** @var \Drupal\node\Entity\Node $node */
+  $node = $entity;
   if ($display->getComponent('short_info')) {
     $url = Url::fromRoute('ajax_popup.popup', [
       'node' => $node->id()
@@ -36,7 +37,6 @@ function ajax_popup_node_view(array &$build, EntityInterface $entity, EntityView
   $build['short_info']['#markup'] = '<div class="field field-extra-short-info">' . $link . '</div>';
   }
 }
-
 /**
  * Implements hook_theme().
  */
