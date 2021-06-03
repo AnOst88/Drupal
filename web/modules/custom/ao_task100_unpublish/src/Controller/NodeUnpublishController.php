@@ -2,7 +2,10 @@
 
 namespace Drupal\ao_task100_unpublish\Controller;
 
+use Drupal\Core\Ajax\AjaxResponse;
+use Drupal\Core\Ajax\AlertCommand;
 use Drupal\Core\Controller\ControllerBase;
+use Drupal\Core\Render\Element\Ajax;
 use Drupal\node\NodeInterface;
 
 /**
@@ -11,14 +14,10 @@ use Drupal\node\NodeInterface;
 class NodeUnpublishController extends ControllerBase {
 
   public function content(NodeInterface $node) {
-    $render = [
-      '#type' => 'inline_template',
-      '#template' => [
-        $node->id(),
-        $node->setPublished(false),
-        $node->save()
-        ]
-    ];
-    return $render;
+    $response = new AjaxResponse();
+    $node->setPublished(false);
+    $node->save();
+    $response->addCommand(new AlertCommand('Post ' . $node->getTitle() . ' unpublished'));
+  return $response;
   }
 }
