@@ -1,0 +1,29 @@
+<?php
+
+/**
+ * @file
+ * Install file for the Update Database module.
+ */
+
+use Drupal\taxonomy\Entity\Term;
+
+/**
+ * Implements hook_update_N().
+ */
+function ao_task39_taxonomy_update_8801(&$sandbox) {
+    $vid = 'сountry';
+
+    $add_countries = [
+        'Portugal',
+        'Singapore', 
+        'Sudan',
+        'Ukraine'
+    ];
+
+    foreach ($add_countries as $country) {
+      $term = Term::create([
+        'name' => $country,
+        'vid' => $vid,
+        ])->save();
+      }
+}
