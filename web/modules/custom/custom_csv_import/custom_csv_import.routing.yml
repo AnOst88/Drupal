@@ -8,3 +8,4 @@ custom_csv_import.admin_settings:
     _permission: 'access administration pages'
   options:
     _admin_route: TRUE
+    

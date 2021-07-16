@@ -36,9 +36,9 @@ class ImportForm extends ConfigFormBase {
   }
 
   /**
- * {@inheritdoc}
- */
-public function buildForm(array $form, FormStateInterface $form_state) {
+   * {@inheritdoc}
+   */
+  public function buildForm(array $form, FormStateInterface $form_state) {
     $config = $this->config('custom_csv_import.import');
   
     $form['file'] = [
@@ -86,9 +86,9 @@ public function buildForm(array $form, FormStateInterface $form_state) {
   }
 
   /**
- * {@inheritdoc}
- */
-public function submitForm(array &$form, FormStateInterface $form_state) {
+   * {@inheritdoc}
+   */
+  public function submitForm(array &$form, FormStateInterface $form_state) {
     parent::submitForm($form, $form_state);
     $config = $this->config('custom_csv_import.import');
     $fid_old = $config->get('fid');
@@ -115,15 +115,16 @@ public function submitForm(array &$form, FormStateInterface $form_state) {
   }
 
   /**
- * {@inheritdoc}
- *
- * Метод для начала импорта из файла.
- */
-public function startImport(array &$form, FormStateInterface $form_state) {
+   * {@inheritdoc}
+   *
+   * Метод для начала импорта из файла.
+   */
+  public function startImport(array &$form, FormStateInterface $form_state) {
     $config = $this->config('custom_csv_import.import');
     $fid = $config->get('fid');
     $skip_first_line = $config->get('skip_first_line');
     $import = new CSVBatchImport($fid, $skip_first_line);
     $import->setBatch();
   }
+
 }
