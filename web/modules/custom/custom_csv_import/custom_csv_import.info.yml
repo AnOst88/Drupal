@@ -1,0 +1,5 @@
+
+name: 'Custom CSV import'
+type: module
+core: 8.x
+version: 1.x
