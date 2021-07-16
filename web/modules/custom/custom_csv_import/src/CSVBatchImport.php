@@ -41,9 +41,9 @@ class CSVBatchImport {
   public function parseCSV() {
     if (($handle = fopen($this->file->getFileUri(), 'r')) !== FALSE) {
       if ($this->skip_first_line) {
-        fgetcsv($handle, 0);
+        fgetcsv($handle, 0, ',');
       }
-      while (($data = fgetcsv($handle, 0)) !== FALSE) {
+      while (($data = fgetcsv($handle, 0, ',')) !== FALSE) {
         $this->setOperation($data);
       }
       fclose($handle);
@@ -70,6 +70,8 @@ class CSVBatchImport {
     ]);
 
     $user->save();
+  
+
   }
 
   /**
@@ -99,5 +101,5 @@ class CSVBatchImport {
     }
     drupal_set_message($message);
   }
-  
+
 }
