@@ -1,0 +1,21 @@
+id: ao_task9_city
+label: 'Custom term migration city'
+migration_group: ao_task9
+source:
+  plugin: csv
+  path: 'modules/custom/ao_task9/asset/csv/migrate_csv_city.csv'
+  header_row_count: 1
+  keys:
+    - ID
+  constants: 
+    status: 1
+  process:
+    name: city
+    country_id: country_id
+    # status: constants/status
+destination:
+  plugin: 'entity:taxonomy_term'
+  default_bundle: taxonomy
+migration_dependencies:
+  require:
+  
