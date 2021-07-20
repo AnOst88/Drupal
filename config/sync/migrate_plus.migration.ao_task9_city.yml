@@ -21,11 +21,10 @@ source:
     status: 1
 process:
   name: city
-  field_city_country: country_id 
-  tid:
+  field_city_country:
     plugin: migration_lookup
     migration: ao_task9_country
-    source: field_old_id
+    source: country_id
 destination:
   plugin: 'entity:taxonomy_term'
   default_bundle: city

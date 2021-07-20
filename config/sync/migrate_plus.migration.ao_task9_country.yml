@@ -12,7 +12,8 @@ label: 'Custom term migration country'
 source:
   plugin: csv
   path: /opt/lampp/htdocs/www/drupal2.loc/web/modules/custom/ao_task9/assets/csv/migrate_csv_country.csv
-  ids: [ID]
+  ids:
+    - ID
   header_row_count: 1
   keys:
     - ID
@@ -20,16 +21,8 @@ source:
     status: 1
 process:
   name: country
-  field_old_id‎: ID
-  roles:
-    -
-      plugin: explode
-      delimiter: ','
-      source: country
+  field_old_id: ID
 destination:
   plugin: 'entity:taxonomy_term'
   default_bundle: country
-migration_dependencies:
-
-
-
+migration_dependencies: null
