@@ -12,7 +12,7 @@ label: 'Custom term migration city'
 source:
   plugin: csv
   path: /opt/lampp/htdocs/www/drupal2.loc/web/modules/custom/ao_task9/assets/csv/migrate_csv_city.csv
-  ids: [ID]
+  ids: ID
   header_row_count: 1
   keys:
     - ID
@@ -31,4 +31,6 @@ destination:
   plugin: 'entity:taxonomy_term'
   default_bundle: city
 migration_dependencies:
+  required:
+    - ao_task9_country
 
