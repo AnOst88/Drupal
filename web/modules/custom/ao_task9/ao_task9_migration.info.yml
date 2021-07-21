@@ -1,0 +1,14 @@
+name: Task 9 Migration
+type: module
+description: Module for migrating.
+core: 8.x
+package: Custom
+dependencies:
+  - migrate_source_csv:migrate_source_csv
+  - migrate_plus:migrate_plus
+  - migrate_tools:migrate_tools
+config_devel:
+  install:
+    - migrate_plus.migration_group.ao_task9
+    - migrate_plus.migration.ao_task9_city
+    - migrate_plus.migration.ao_task9_country

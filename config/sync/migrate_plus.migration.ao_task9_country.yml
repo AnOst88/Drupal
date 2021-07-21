@@ -1,0 +1,28 @@
+uuid: 2ae31e84-c84c-4d38-a4b9-f5985b51c29b
+langcode: en
+status: true
+dependencies: {  }
+id: ao_task9_country
+class: null
+field_plugin_method: null
+cck_plugin_method: null
+migration_tags: null
+migration_group: task9_migration
+label: 'Custom term migration country'
+source:
+  plugin: csv
+  path: /opt/lampp/htdocs/www/drupal2.loc/web/modules/custom/ao_task9/assets/csv/migrate_csv_country.csv
+  ids:
+    - ID
+  header_row_count: 1
+  keys:
+    - ID
+  constants:
+    status: 1
+process:
+  name: country
+  field_old_id: ID
+destination:
+  plugin: 'entity:taxonomy_term'
+  default_bundle: country
+migration_dependencies: null

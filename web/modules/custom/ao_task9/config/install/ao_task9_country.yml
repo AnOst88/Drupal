@@ -1,0 +1,23 @@
+id: ao_task9_country
+label: 'Custom term migration country'
+migration_group: ao_task9
+source:
+  plugin: csv
+  path: 'modules/custom/ao_task9/asset/csv/migrate_csv_country.csv'
+  header_row_count: 1
+  keys:
+    - ID
+  constants: 
+    status: 1
+process:
+  name: country
+  roles:
+    - plugin: explode
+      delimiter: ","
+      source: name
+destination:
+  plugin: 'entity:taxonomy_term'
+  default_bundle: taxonomy
+migration_dependencies:
+  require:
+  
