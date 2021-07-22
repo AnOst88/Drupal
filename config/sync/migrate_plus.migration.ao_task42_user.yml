@@ -1,0 +1,28 @@
+uuid: fb52580e-7bdf-41a8-aba4-db609406ce40
+langcode: ru
+status: true
+dependencies: {  }
+id: ao_task42_user
+class: null
+field_plugin_method: null
+cck_plugin_method: null
+migration_tags: null
+migration_group: ao_task42
+label: 'User migration'
+source:
+  plugin: csv
+  path: /opt/lampp/htdocs/www/drupal2.loc/web/modules/custom/ao_task42_migrate_user/assets/csv/migrate_csv_users.csv
+  ids:
+    - ID
+  header_row_count: 1
+  keys:
+    - ID
+  constants:
+    status: 1
+process:
+  name: name
+  field_full_name:
+       plugin: strrev
+destination:
+  plugin: 'entity:user'
+migration_dependencies: null

@@ -1,0 +1,13 @@
+name: Task 42 Migrate Users
+description: Task 42 migrate users
+type: module
+core: 8.x
+package: Custom
+dependencies:
+  - migrate_source_csv:migrate_source_csv
+  - migrate_plus:migrate_plus
+  - migrate_tools:migrate_tools
+config_devel:
+  install:
+    - migrate_plus.migration_group.ao_task42
+    - migrate_plus.migration.ao_task42_user
