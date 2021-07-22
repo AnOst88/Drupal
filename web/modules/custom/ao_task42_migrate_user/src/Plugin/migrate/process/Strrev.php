@@ -17,7 +17,7 @@ class Strrev extends ProcessPluginBase {
    * {@inheritdoc}
    */
   public function transform($value, \Drupal\migrate\MigrateExecutableInterface $migrate_executable, \Drupal\migrate\Row $row, $destination_property) {
-    if(!empty($row->get('lastname'))){
+    if (!empty($row->get('lastname'))) {
       $value = $row->get('name') . '-' .  strrev($row->get('lastname'));
       return $value;
     }
