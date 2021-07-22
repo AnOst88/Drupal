@@ -1,0 +1,7 @@
+ao_task54_include_js:
+  version: 1.x
+  js:
+    js/task_include.js: {}
+  dependencies:
+    - core/jquery
+    - core/jquery.once

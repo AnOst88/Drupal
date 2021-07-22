@@ -1,0 +1,6 @@
+name: Task54_IncluedeJsFile
+description: task54 JS
+core: 8.x
+type: module
+package: Custom
+
