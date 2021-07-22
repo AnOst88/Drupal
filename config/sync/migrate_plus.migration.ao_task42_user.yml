@@ -1,4 +1,4 @@
-uuid: 0efe154b-6072-45a6-b922-e9af3b4103d9
+uuid: fb52580e-7bdf-41a8-aba4-db609406ce40
 langcode: ru
 status: true
 dependencies: {  }
@@ -22,11 +22,7 @@ source:
 process:
   name: name
   field_full_name:
-    plugin: concat
-    source:
-      - name
-      - lastname
-    delimiter: ' '
+       plugin: strrev
 destination:
   plugin: 'entity:user'
 migration_dependencies: null
