@@ -1,0 +1,8 @@
+name: Task56_MW
+description: task56 Modal Window
+core: 8.x
+type: module
+package: ao_task56_modal_window
+dependencies:
+  - drupal:block
+

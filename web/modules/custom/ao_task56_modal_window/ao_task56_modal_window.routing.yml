@@ -1,0 +1,7 @@
+ao_task54_js.include_js:
+  path: '/task56'
+  defaults: 
+    _controller: '\Drupal\ao_task56_modal_window\Controller\ModalWindowController::content'
+    _title: 'Task 56 Modal Window'
+  requirements:
+    _permission: 'access content'
