@@ -21,7 +21,7 @@ class JsFileInclud extends BlockBase {
   
     $build = [];
     $build['#markup'] = 'Task 55 Alert Block';
-    $build['#markup'] = '<a href="/task55" class="use-ajax" data-dialog-type="modal">Запрос</a>';
+    $build['#markup'] = '<a class="use-ajax" href="/task55/alert/">Alert button</a>';
 
     return $build;
   }
