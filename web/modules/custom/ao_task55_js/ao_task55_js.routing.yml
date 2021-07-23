@@ -1,0 +1,15 @@
+ao_task54_js.include_js:
+  path: '/task55'
+  defaults: 
+    _controller: '\Drupal\ao_task55_js\Controller\JsFileController::content'
+    _title: 'Task 55 Include JS'
+  requirements:
+    _permission: 'access content'
+
+ao_task54_js.routing:
+  path: '/task55/alert'
+  defaults: 
+    _controller: '\Drupal\ao_task55_js\Controller\JsFileController::ajaxLinkAlert'
+    _title: 'Task 55 Include JS'
+  requirements:
+    _permission: 'access content'
