@@ -1,0 +1,8 @@
+name: Task55_JsFile
+description: task55 JS
+core: 8.x
+type: module
+package: ao_task55_js
+dependencies:
+  - drupal:block
+

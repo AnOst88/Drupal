@@ -1,0 +1,7 @@
+ao_task54_js.include_js:
+  path: 'task55'
+  defaults: 
+    _controller: '\Drupal\ao_task55_js\Controller\JsFile::content'
+    _title: 'Task 55 Include JS'
+  requirements:
+    _permission: 'access content'
