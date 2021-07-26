@@ -1,10 +1,11 @@
 <?php
 
   /**
-   * Name caching on first login
+   * Name caching on first enter the page
    */
 function ao_task78_test_cache_user_login($account) {
-  if (!$account->getLastAccessedTime()) {
+  $route_name = \Drupal::routeMatch()->getRouteName('ao_task78_cache.cache');
+  if ($route_name == 'ao_task78_cache.cache') {
     $cid = $account->getAccountName();
     \Drupal::cache()->set('user', $cid);
     drupal_set_message(t('Ваш первый вход на сайт. Приветствуем!'));

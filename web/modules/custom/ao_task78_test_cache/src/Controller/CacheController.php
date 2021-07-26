@@ -44,6 +44,7 @@ class CacheController extends ControllerBase {
     $cid = $this->currentUser->getAccountName();
     // Get cache name
     $name = \Drupal::cache()->get('user', TRUE);
+
     // Check account name and cache name
    if ($name !== $cid) {
       \Drupal::cache()->set('user', $cid);
@@ -58,7 +59,7 @@ class CacheController extends ControllerBase {
     // If not changed cache 
     else {
       return [
-        '#markup' => '<h2>' . $name . '</h2>',
+        '#markup' => '<h2>' . $name->data . '</h2>',
       ];
     }
   }
