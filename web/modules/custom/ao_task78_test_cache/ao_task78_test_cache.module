@@ -1,5 +1,8 @@
 <?php
 
+  /**
+   * Name caching on first login
+   */
 function ao_task78_test_cache_user_login($account) {
   if (!$account->getLastAccessedTime()) {
     $cid = $account->getAccountName();
