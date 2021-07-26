@@ -41,22 +41,19 @@ class CacheController extends ControllerBase {
    */
   public function myPage() {
     $cid = $this->currentUser->getAccountName();
-
-    \Drupal::cache()->set('user', $cid);
-    if (!empty($item = \Drupal::cache()->get('user'))) {
+   if (\Drupal::cache()->get('user', TRUE) !== $cid){
+      \Drupal::cache()->set('user', $cid);
+      $new_name = \Drupal::cache()->get('user', TRUE);
       return [
-        '#markup' => '<h2>' . 'Hello, ' . $item->data . '</h2>',
+        '#markup' => '<h2>' . 'Hello, ' . $new_name->data . '</h2>',
         '#cache' => [
-            'max-age' => 0,
-          ],
+          'max-age' => 0,
+        ],
       ];
-    } 
+    }
     else {
       return [
-        '#markup' => '<h2>' . 'Log in please' . '</h2>',
-        '#cache' => [
-            'max-age' => 0,
-        ],
+        '#markup' => '<h2>' . 'Not Work' . '</h2>',
       ];
     }
   }
