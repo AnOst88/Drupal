@@ -11,7 +11,7 @@ class CacheController extends ControllerBase {
 
 
   /**
-   *Index.
+   * Index.
    *
    */
   public function index(){
@@ -39,7 +39,7 @@ class CacheController extends ControllerBase {
   }
 
   /**
-   *Cached user name.
+   * Cached user name.
    *
    */
   public function getCachedUserName() {
@@ -67,9 +67,6 @@ class CacheController extends ControllerBase {
       '#markup' => $this->t('<h2>' . 'Name from cache:  %name' . '</h2>', [
         '%name' => $getCacheUser->data, 
       ]),
-      '#cache' => [
-        'max-age' => 0
-      ]
     ];
   }
 

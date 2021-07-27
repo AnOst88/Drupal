@@ -1,7 +1,15 @@
+ao_task78_cache.task:
+  path: '/test/task78'
+  defaults: 
+    _controller: '\Drupal\ao_task78_test_cache\Controller\CacheController::index'
+    _title: 'Task 78'
+  requirements:
+    _permission: 'access content'
+
 ao_task78_cache.cache:
   path: '/test/cache'
   defaults: 
-    _controller: '\Drupal\ao_task78_test_cache\Controller\CacheController::index'
+    _controller: '\Drupal\ao_task78_test_cache\Controller\CacheController::getCachedUserName'
     _title: 'Task 78 Cache'
   requirements:
     _permission: 'access content'
