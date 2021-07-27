@@ -1,7 +1,7 @@
 ao_task78_cache.cache:
   path: '/test/cache'
   defaults: 
-    _controller: '\Drupal\ao_task78_test_cache\Controller\CacheController::myPage'
+    _controller: '\Drupal\ao_task78_test_cache\Controller\CacheController::index'
     _title: 'Task 78 Cache'
   requirements:
     _permission: 'access content'

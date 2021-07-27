@@ -3,8 +3,6 @@
 namespace Drupal\ao_task78_test_cache\Controller;
 
 use Drupal\Core\Controller\ControllerBase;
-use Drupal\Core\Session\AccountProxy;
-use Symfony\Component\DependencyInjection\ContainerInterface;
 
 /**
  * Provides route responses for the Cache module.
@@ -12,55 +10,85 @@ use Symfony\Component\DependencyInjection\ContainerInterface;
 class CacheController extends ControllerBase {
 
 
-   /**
-   * User class.
+  /**
+   *Index.
    *
-   * @param \Drupal\Core\Session\AccountProxy $currentUser
-   * 
    */
-  protected $currentUser;
-
-  public function __construct(AccountProxy $currentUser) {
-    $this->currentUser = $currentUser;
+  public function index(){
+    return[
+      $this->getUserName(),
+      $this->getCachedUserName()
+    ];
   }
-
-    /**
-   * {@inheritdoc}
+  
+  /**
+   * Get authorized user name.
+   *
    */
-  public static function create(ContainerInterface $container) {
-    return new static(
-      $container->get('current_user'),
-    );
+  public function getUserName(){
+    // Get account name from ID
+    $user = \Drupal\user\Entity\User::load(\Drupal::currentUser()->id());
+    $user_name = $user->get('name')->value;
+     // Return name from page
+     return [
+      '#markup' => $this->t('<h2>' . 'User name: Hello - ' . $user_name . '</h2>'),
+      '#cache' => [
+        'max-age' => 0
+      ]
+    ];
   }
 
   /**
-   * Returns a simple page.
+   *Cached user name.
    *
-   * @return array
-   *   A simple renderable array.
    */
-  public function myPage() {
-    // Get account name
-    $cid = $this->currentUser->getAccountName();
-    // Get cache name
-    $name = \Drupal::cache()->get('user', TRUE);
-
-    // Check account name and cache name
-   if ($name !== $cid) {
-      \Drupal::cache()->set('user', $cid);
-      $new_name = \Drupal::cache()->get('user', TRUE);
-      return [
-        '#markup' => '<h2>' . 'Hello, ' . $new_name->data . '</h2>',
-        '#cache' => [
-          'max-age' => 0,
-        ],
-      ];
+  public function getCachedUserName() {
+    // Get account name from ID
+    $user = \Drupal\user\Entity\User::load(\Drupal::currentUser()->id());
+    $userName = $user->getUserName();
+    $uid = $user->get('uid')->value;
+    // Get route name
+    $route_name = \Drupal::routeMatch()->getRouteName('ao_task78_cache.cache');
+    // Get cached user name
+    $getCacheUser = \Drupal::cache()->get('cachedUser', TRUE);
+    //dump($user_name);
+    if ($route_name && empty($getCacheUser)) {
+      // Cached user name
+      $this->cachedUserName($userName, $uid);
+      $getCacheUser = \Drupal::cache()->get('cachedUser', TRUE);
+      // dump( $getCacheUser);
+    } 
+    else { //Update name
+      $this->updateUserName();
+      $getCacheUser = \Drupal::cache()->get('cachedUser', TRUE);
     }
-    // If not changed cache 
-    else {
-      return [
-        '#markup' => '<h2>' . $name->data . '</h2>',
-      ];
-    }
+    // Return name from page
+    return [
+      '#markup' => $this->t('<h2>' . 'Name from cache:  %name' . '</h2>', [
+        '%name' => $getCacheUser->data, 
+      ]),
+      '#cache' => [
+        'max-age' => 0
+      ]
+    ];
   }
+
+  /**
+   * Cached user name
+   */
+  public function cachedUserName($cachedName) {
+    \Drupal::cache()->set('cachedUser', $cachedName);
+  } 
+
+  /**
+   * Update user name
+   */
+  public function updateUserName() {
+    $user = \Drupal\user\Entity\User::load(\Drupal::currentUser()->id());
+    $userName = $user->get('name')->value;
+    $uid = $user->get('uid')->value;
+    if(\Drupal::cache()->get('cachedUser', TRUE) != $userName){
+      $this->cachedUserName($userName, $uid);
+    }
+  } 
 }
