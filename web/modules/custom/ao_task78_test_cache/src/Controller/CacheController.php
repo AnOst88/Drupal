@@ -42,7 +42,7 @@ class CacheController extends ControllerBase {
   }
 
    /**
-   * Return ache.
+   * Return useer name from cache.
    *
    */
   public function showCacheUserName() {
@@ -53,7 +53,7 @@ class CacheController extends ControllerBase {
   }
 
    /**
-   * Save user name.
+   * Cahed and return user name.
    *
    */
   public function saveUserName(){
