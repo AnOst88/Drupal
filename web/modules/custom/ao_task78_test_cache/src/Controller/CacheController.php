@@ -10,6 +10,8 @@ use \Drupal\user\Entity\User;
  */
 class CacheController extends ControllerBase {
 
+  public $userName;
+
   /**
    * Cached user name.
    *
@@ -17,14 +19,14 @@ class CacheController extends ControllerBase {
   public function getCachedUserName() {
     // Get user name
     $user = User::load(\Drupal::currentUser()->id());
-    $userName = $user->get('name')->value;
+    $this->userName = $user->get('name')->value;
     // Get cached user name
     $getCacheUser = \Drupal::cache()->get('cachedUser', TRUE);
     $newName = $this->saveUserName();
 
     if (empty($getCacheUser)) {
       // Cached user name
-      \Drupal::cache()->set('cachedUser', $userName);
+      \Drupal::cache()->set('cachedUser', $this->userName);
       $getCacheUser  = \Drupal::cache()->get('cachedUser', TRUE);
     } 
     else {
@@ -46,10 +48,8 @@ class CacheController extends ControllerBase {
    *
    */
   public function saveUserName(){
-    $user = User::load(\Drupal::currentUser()->id());
-    $set_name = $user->get('name')->value;
-    \Drupal::cache()->set('set', $set_name);
-    $user_name = \Drupal::cache()->get('set', TRUE);
+    \Drupal::cache()->set('cachedUser', $this->userName);
+    $user_name = \Drupal::cache()->get('cachedUser', TRUE);
      
     return $user_name;
   }
@@ -61,7 +61,7 @@ class CacheController extends ControllerBase {
   public function showCacheUserName() {
     $cache = \Drupal::cache()->get('cachedUser', TRUE);
     return [
-      '#markup' => $cache->data
+      '#markup' => $cache->data,
     ];
   }
 }
