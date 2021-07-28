@@ -10,48 +10,32 @@ use \Drupal\user\Entity\User;
  */
 class CacheController extends ControllerBase {
 
-  public $userName;
-
   /**
    * Cached user name.
    *
    */
+  
   public function getCachedUserName() {
     // Get user name
     $user = User::load(\Drupal::currentUser()->id());
-    $this->userName = $user->get('name')->value;
+    $user_name = $user->get('name')->value;
     // Get cached user name
-    $getCacheUser = \Drupal::cache()->get('cachedUser', TRUE);
-    $newName = $this->saveUserName();
+    $cache_user_name = \Drupal::cache()->get('cachedUser', TRUE);
 
-    if (empty($getCacheUser)) {
+    if (empty($cache_user_name)) {
       // Cached user name
-      \Drupal::cache()->set('cachedUser', $this->userName);
-      $getCacheUser  = \Drupal::cache()->get('cachedUser', TRUE);
+      \Drupal::cache()->set('cachedUser', $user_name);
+      $cache_user_name = \Drupal::cache()->get('cachedUser', TRUE);
     } 
-    else {
-      $getCacheUser = $newName;
-    }
     // Return name from page
     return [
       '#markup' => $this->t('<h2>' . 'Name from cache:  %name' . '</h2>', [
-        '%name' =>  $getCacheUser->data, 
+        '%name' =>  $cache_user_name->data, 
       ]),
       '#cache' => [
         'max-age' => 0
       ]
     ];
-  }
-
-   /**
-   * Cahed and return user name.
-   *
-   */
-  public function saveUserName(){
-    \Drupal::cache()->set('cachedUser', $this->userName);
-    $user_name = \Drupal::cache()->get('cachedUser', TRUE);
-     
-    return $user_name;
   }
 
    /**
