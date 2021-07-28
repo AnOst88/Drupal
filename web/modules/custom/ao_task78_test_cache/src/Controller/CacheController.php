@@ -59,7 +59,7 @@ class CacheController extends ControllerBase {
    *
    */
   public function showCacheUserName() {
-    $cache = $this->saveUserName();
+    $cache = \Drupal::cache()->get('cachedUser', TRUE);
     return [
       '#markup' => $cache->data
     ];
