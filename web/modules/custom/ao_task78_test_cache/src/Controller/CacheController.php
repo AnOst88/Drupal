@@ -42,17 +42,6 @@ class CacheController extends ControllerBase {
   }
 
    /**
-   * Return useer name from cache.
-   *
-   */
-  public function showCacheUserName() {
-    $cache = $this->saveUserName();
-    return [
-      '#markup' => $cache->data
-    ];
-  }
-
-   /**
    * Cahed and return user name.
    *
    */
@@ -63,5 +52,16 @@ class CacheController extends ControllerBase {
     $user_name = \Drupal::cache()->get('set', TRUE);
      
     return $user_name;
+  }
+
+   /**
+   * Return useer name from cache.
+   *
+   */
+  public function showCacheUserName() {
+    $cache = $this->saveUserName();
+    return [
+      '#markup' => $cache->data
+    ];
   }
 }
