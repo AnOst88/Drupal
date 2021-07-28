@@ -10,25 +10,6 @@ use \Drupal\user\Entity\User;
  */
 class CacheController extends ControllerBase {
 
-  public $user_name;
- 
-  /**
-   * Get authorized user name.
-   *
-   */
-  public function getUserName(){
-    // Get account name from ID
-    $user = User::load(\Drupal::currentUser()->id());
-    $name = $user->get('name')->value;
-     // Return name from page
-     return [
-      '#markup' => $this->t('<h2>' . 'User name: Hello - ' . $name . '</h2>'),
-      '#cache' => [
-        'max-age' => 0
-      ]
-    ];
-  }
-
   /**
    * Cached user name.
    *
@@ -52,11 +33,22 @@ class CacheController extends ControllerBase {
     // Return name from page
     return [
       '#markup' => $this->t('<h2>' . 'Name from cache:  %name' . '</h2>', [
-        '%name' =>  $getCacheUser ->data, 
+        '%name' =>  $getCacheUser->data, 
       ]),
       '#cache' => [
         'max-age' => 0
       ]
+    ];
+  }
+
+   /**
+   * Return ache.
+   *
+   */
+  public function showCacheUserName() {
+    $cache = $this->saveUserName();
+    return [
+      '#markup' => $cache->data,
     ];
   }
 
@@ -68,8 +60,8 @@ class CacheController extends ControllerBase {
     $user = User::load(\Drupal::currentUser()->id());
     $set_name = $user->get('name')->value;
     \Drupal::cache()->set('set', $set_name);
-    $this->user_name = \Drupal::cache()->get('set', TRUE);
+    $user_name = \Drupal::cache()->get('set', TRUE);
      
-    return $this->user_name;
+    return $user_name;
   }
 }
