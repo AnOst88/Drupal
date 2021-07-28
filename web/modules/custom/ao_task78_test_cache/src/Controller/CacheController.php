@@ -48,7 +48,7 @@ class CacheController extends ControllerBase {
   public function showCacheUserName() {
     $cache = $this->saveUserName();
     return [
-      '#markup' => $cache->data,
+      '#markup' => $cache->data
     ];
   }
 
