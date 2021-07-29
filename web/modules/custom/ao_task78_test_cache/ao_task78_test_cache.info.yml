@@ -1,0 +1,7 @@
+name: Task78_Cache
+description: task78 cache
+core: 8.x
+type: module
+package: ao_task78_test_cache
+dependencies:
+

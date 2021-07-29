@@ -1,0 +1,15 @@
+ao_task78_cache.name:
+  path: '/show/cache'
+  defaults: 
+    _controller: '\Drupal\ao_task78_test_cache\Controller\CacheController::showCacheUserName'
+    _title: 'Task 78 Cache user name'
+  requirements:
+    _permission: 'access content'
+
+ao_task78_cache.cache:
+  path: '/test/cache'
+  defaults: 
+    _controller: '\Drupal\ao_task78_test_cache\Controller\CacheController::getCachedUserName'
+    _title: 'Task 78 Cache'
+  requirements:
+    _permission: 'access content'
