@@ -1,0 +1,16 @@
+<?php
+
+use Drupal\user\Entity\User;
+use Drupal\core\Cache\Cache;
+/**
+ * Hook user update.
+ */
+function ao_task78_test_cache_user_update($account) {
+  $original_value = $account->original->get('name')->value;
+  //dump($original_value);
+  $updated_value = $account->get('name')->value;
+  //dump($updated_value);
+  if ($original_value != $updated_value) {
+    Cache::invalidateTags($cache_tags);
+  }
+}
