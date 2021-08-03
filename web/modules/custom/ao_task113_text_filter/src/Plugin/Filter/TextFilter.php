@@ -28,13 +28,16 @@ class TextFilter extends FilterBase{
    */
   public function process($text, $langcode) {
     $result = new FilterProcessResult($text);
-    $config_text = $this->settings['search'];
-    $replaceable_words = explode(',', $config_text);
-    $fixed = str_ireplace($replaceable_words, ucfirst($config_text), $text);
-    $result->setProcessedText($fixed);
+    $config_words = $this->settings['search'];
+    $replaceable_words = explode(',', $config_words);
+    foreach ($replaceable_words as $words) {
+    
+  }
+   // $fixed_text = str_ireplace($replaceable_words, ucwords($config_words), $text);
+    $result->setProcessedText($fixed_text);
        
     return $result;
-}
+  }
 
   /**
    * {@inheritdoc}
