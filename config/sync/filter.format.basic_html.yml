@@ -3,7 +3,9 @@ langcode: en
 status: true
 dependencies:
   module:
+    - ao_task113_text_filter
     - editor
+    - token_filter
 _core:
   default_config_hash: P8ddpAIKtawJDi5SzOwCzVnnNYqONewSTJ6Xn0dW_aQ
 name: 'Basic HTML'
@@ -43,3 +45,17 @@ filters:
     status: true
     weight: 11
     settings: {  }
+  token_filter:
+    id: token_filter
+    provider: token_filter
+    status: true
+    weight: 0
+    settings:
+      replace_empty: '0'
+  text_letters_filter:
+    id: text_letters_filter
+    provider: ao_task113_text_filter
+    status: true
+    weight: 0
+    settings:
+      search: small
