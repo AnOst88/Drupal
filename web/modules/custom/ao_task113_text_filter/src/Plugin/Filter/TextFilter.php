@@ -30,12 +30,9 @@ class TextFilter extends FilterBase{
     $result = new FilterProcessResult($text);
     $config_words = $this->settings['search'];
     $replaceable_words = explode(',', $config_words);
-    foreach ($replaceable_words as $words) {
-    
-  }
-   // $fixed_text = str_ireplace($replaceable_words, ucwords($config_words), $text);
+    $fixed_text = str_replace($replaceable_words, array_map('ucwords',$replaceable_words), $text);
     $result->setProcessedText($fixed_text);
-       
+   
     return $result;
   }
 
