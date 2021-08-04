@@ -43,17 +43,16 @@ class TextLetterFilter extends FilterBase {
     $result = new FilterProcessResult($text);
     $words = $this->settings['search'];
     $replaceable_words = explode(' ', $words);
-    $text = preg_replace('!\s++!u', ' ', strip_tags($text));
-    $income_texts = explode(' ', $text);
+    $replacements = [];
 
-    foreach($income_texts as $key => $value){
-      if (in_array($income_texts[$key], $replaceable_words)) {
-       $income_texts[$key] = mb_convert_case($value, MB_CASE_TITLE, "UTF-8");
-      }
+    foreach ($replaceable_words as $key => $value) {
+      $replacements[$key] = mb_convert_case($value, MB_CASE_TITLE, "UTF-8");
     }
-    $fixed_text = implode(' ', $income_texts);
+    $fixed_text = str_replace($replaceable_words, $replacements, $text);
     $result->setProcessedText($fixed_text);
 
     return $result;
   }
 }
+
+
