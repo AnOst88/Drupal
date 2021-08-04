@@ -18,33 +18,9 @@ use Drupal\Core\Form\FormStateInterface;
  *   }
  * )
  */
-class TextFilter extends FilterBase{
+class TextLetterFilter extends FilterBase {
 
-  /**
-   * {@inheritdoc}
-   */
-  public function process($text, $langcode) {
-    $result = new FilterProcessResult($text);
-    $words = $this->settings['search'];
-    $replaceable_words = explode(' ', $words);
-   // dump(gettype( $replaceable_words));
-   //dump($replaceable_words);
-    $income_texts = explode(' ', $text);
-   //dump($income_texts);
-
-    foreach($income_texts as $key => $search){
-      if (in_array($income_texts[$key], $replaceable_words, true)) {
-        $income_texts[$key] = mb_convert_case($search, MB_CASE_TITLE, "UTF-8");
-      }
-    }
-    //dump($text);
-    $fixed_text = implode(' ', $income_texts);
-    $result->setProcessedText($fixed_text);
-   
-    return $result;
-  }
-
-  /**
+   /**
    * {@inheritdoc}
    */
   public function settingsForm(array $form, FormStateInterface $form_state) {
@@ -57,5 +33,27 @@ class TextFilter extends FilterBase{
     ];
 
     return $form;
+  }
+
+  /**
+   * {@inheritdoc}
+   */
+  public function process($text, $langcode): FilterProcessResult
+  {
+    $result = new FilterProcessResult($text);
+    $words = $this->settings['search'];
+    $replaceable_words = explode(' ', $words);
+    $text = preg_replace('!\s++!u', ' ', strip_tags($text));
+    $income_texts = explode(' ', $text);
+
+    foreach($income_texts as $key => $value){
+      if (in_array($income_texts[$key], $replaceable_words)) {
+       $income_texts[$key] = mb_convert_case($value, MB_CASE_TITLE, "UTF-8");
+      }
+    }
+    $fixed_text = implode(' ', $income_texts);
+    $result->setProcessedText($fixed_text);
+
+    return $result;
   }
 }
