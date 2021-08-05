@@ -1,0 +1,7 @@
+name: Custom text filter
+type: module
+description: Text filter.
+core: 8.x
+package: 'Custom'
+dependencies:
+  
