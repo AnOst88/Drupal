@@ -25,11 +25,10 @@ class TextLetterFilter extends FilterBase {
    */
   public function settingsForm(array $form, FormStateInterface $form_state) {
     $form['search'] = [
-      '#type' => 'textfield',
-      '#title' => $this->t('Search'),
+      '#type' => 'textarea',
+      '#title' => $this->t('Enter words'),
       '#default_value' => $this->settings['search'],
-      '#maxlength' => 1024,
-      '#size' => 250,
+      '#description' => $this->t('Enter the words you want to find in the text. And first letter of this words raise uppercased. Enter words separated by a space.'),
     ];
 
     return $form;
@@ -46,7 +45,7 @@ class TextLetterFilter extends FilterBase {
     $replacements = [];
 
     foreach ($replaceable_words as $key => $value) {
-      $replacements[$key] = mb_convert_case($value, MB_CASE_TITLE, "UTF-8");
+      $replacements[$key] = mb_convert_case($value, MB_CASE_TITLE);
     }
     $fixed_text = str_replace($replaceable_words, $replacements, $text);
     $result->setProcessedText($fixed_text);
