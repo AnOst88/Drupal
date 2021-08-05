@@ -1,0 +1,7 @@
+name: Custom recent log messages/Node update
+type: module
+description: Log Message/Node update.
+core: 8.x
+package: 'Custom'
+dependencies:
+  
