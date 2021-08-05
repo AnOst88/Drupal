@@ -9,8 +9,12 @@
  * Implements hook_node_update().
  * After node update, this hook insert message in recent log.
  */
-function ao_task118_recent_log_messages_node_update(Drupal\node\NodeInterface $node){ 
+function ao_task118_recent_log_messages_node_update(Drupal\node\NodeInterface $node) { 
   $title = $node->getTitle();
-  $type =  $node->getType();  
-  \Drupal::logger('ao_task118_recent_log_messages')->info('Node with title - @title, of type - @type - has been updated', ['@title' => $title, '@type' => $type]);
+  $type = $node->getType();  
+  $context = t('Node with title - %title, of type - %type - has been updated', [
+    '%title' => $title,
+    '%type' => $type,
+  ]);
+  \Drupal::logger('ao_task118_recent_log_messages')->info($context);
 }
