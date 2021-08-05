@@ -11,5 +11,5 @@
  */
 
 function ao_task118_recent_log_messages_node_update(Drupal\node\NodeInterface $node){
-    \Drupal::logger('ao_task118_recent_log_messages')->info("Node with title" . " - " . $node->getTitle() . " - " . "of type" . " - " . $node->getType() . " - " . "has been updated");
+  \Drupal::logger("ao_task118_recent_log_messages")->info("Node with title" . " - " . $node->getTitle() . " - " . "of type" . " - " . $node->getType() . " - " . "has been updated");
 }
