@@ -1,0 +1,8 @@
+name: Custom hook event
+type: module
+description: Event
+core: 8.x
+package: 'Custom'
+dependencies:
+  - drupal:hook_event_dispatcher
+  

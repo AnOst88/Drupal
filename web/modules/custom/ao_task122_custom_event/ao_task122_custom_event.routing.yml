@@ -1,0 +1,7 @@
+ao_task122_event.name:
+  path: '/event/page'
+  defaults: 
+    _controller: '\Drupal\ao_task122_custom_event\Controller\CustomEvent::content'
+    _title: 'Task 122 Event'
+  requirements:
+    _permission: 'access content'
