@@ -36,16 +36,7 @@ class Task122Subscriber implements EventSubscriberInterface {
    */
   public function preprocessHtml(PageLoadEvent $event) {   
     $messenger = \Drupal::service('messenger');
-    $messenger->addMessage('Event for preprocess HTML called');
-//     $dateFormatter = \Drupal::service('date.formatter');
-//     $view = \Drupal\views\Views::getView('/show/cache');
-//     $current_path = \Drupal::service('ao_task78_cache.name')->getPath();
-
-// //  if ($current_path) {
-//       \Drupal::logger('Custom hook event')->notice('Simple Page Loaded');
-      // \Drupal::messenger()->addStatus(t('С ВОЗВРАЩЕНИЕМ, Ваш аккаунт был создан -  %created_date.', [
-      //   '%created_date' => $dateFormatter,
-      // ]));
- // }
+    $messenger->addMessage('Simple Page Load');
+    \Drupal::logger('Custom hook event')->notice('Simple Page Loaded');
   }
 }
