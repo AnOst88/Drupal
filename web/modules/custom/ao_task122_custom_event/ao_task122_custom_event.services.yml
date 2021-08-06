@@ -1,0 +1,6 @@
+services:
+  # Subscriber to the event we dispatch in hook_user_login.
+  ao_task122_custom_event.ao_task122_custom_event_subscriber:
+    class: '\Drupal\ao_task122_custom_event\EventSubscriber\Task122Subscriber'
+    tags:
+      - { name: event_subscriber }
