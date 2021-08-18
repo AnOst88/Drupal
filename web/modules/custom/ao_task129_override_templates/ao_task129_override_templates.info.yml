@@ -1,7 +1,0 @@
-name: Custom Override Templates
-type: module
-description: Override Templates
-core: 8.x
-package: 'Custom'
-dependencies:
-  
