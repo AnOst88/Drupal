@@ -1,5 +1,0 @@
-<?php
-
-function ao_task129_override_templates_preprocess_node__article(&$variables){
-    $variables['custom_text'] = 'NODE';
-}
