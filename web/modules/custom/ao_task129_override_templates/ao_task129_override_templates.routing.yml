@@ -1,7 +1,0 @@
-ao_task129_override_templates.name:
-  path: '/override/templates'
-  defaults: 
-    _controller: '\Drupal\ao_task129_override_templates\Controller\OverrideTemplateController::build'
-    _title: 'Task 129 Override Templates'
-  requirements:
-    _permission: 'access content'
