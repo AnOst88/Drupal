@@ -1,0 +1,21 @@
+<?php
+
+/**
+ * Implements hook_theme().
+ */
+function ao_task129_override_templates_theme($existing, $type, $theme, $path) {
+  return [
+    'override_templates' => [
+    'variables' => [],
+    ],
+  ];
+}
+
+/**
+ * Implements template_preprocess_HOOK().
+ */
+function template_preprocess_override_templates(&$variables) {
+  $time = \Drupal::time()->getrequestTime();
+  $date_formatter = \Drupal::service('date.formatter');
+  $variables['date'] = $date_formatter->format($time);
+}
