@@ -1,0 +1,6 @@
+configure: ao_task28_show_block
+name: 'ao_task28_show_block'
+type: module
+description: 'Show block depending on url parameter'
+core: 8.x 
+package: 'Custom'

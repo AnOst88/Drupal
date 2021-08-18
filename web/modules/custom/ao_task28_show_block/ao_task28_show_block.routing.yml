@@ -1,0 +1,7 @@
+ao_task28_show_block.name:
+  path: '/page/3'
+  defaults: 
+    _controller: '\Drupal\ao_task28_show_block\Controller\ShowPageBlockController::build'
+    _title: 'Task 28 Show Block'
+  requirements:
+    _permission: 'access content'
