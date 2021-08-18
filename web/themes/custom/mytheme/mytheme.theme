@@ -1,5 +1,17 @@
 <?php
 
  function mytheme_preprocess_node__article(&$variables){
-    $variables['custom_text'] = 'NODE';
+   $variables['custom_text'] = 'NODE';
+ }
+
+ /**
+  * implements hook_form_FORM_ID_alter()
+  */
+ function mytheme_form_user_pass_reset_alter(&$form, &$form_state, $form_id) {
+   $build_info = $form_state->getBuildInfo();
+   $user = $build_info['args'][0];
+   $context = t(' Ну, что - %user_name - снова забыл.', [
+    '%user_name' => $user->name->getValue()[0]['value'],
+  ]);
+   $form['message']['#markup'] = $context;
  }

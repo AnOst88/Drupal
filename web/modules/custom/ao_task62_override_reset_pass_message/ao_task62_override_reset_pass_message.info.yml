@@ -1,0 +1,7 @@
+name: Override Reset Password Message
+type: module
+description: Override reset password message
+core: 8.x
+package: 'Custom'
+dependencies:
+  
