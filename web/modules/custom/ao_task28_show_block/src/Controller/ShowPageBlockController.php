@@ -12,16 +12,14 @@ class ShowPageBlockController extends ControllerBase {
   /**
    * Builds the response.
    */
-  public function build() {
-    $build['content'] = [
-      '#type' => 'item',
-      '#markup' => $this->t('Task 28'),
-    ];
-    // Show block
-    $bid = 1; // Existing block created via UI.
-    $block = \Drupal\block_content\Entity\BlockContent::load($bid);
-    $build = \Drupal::entityTypeManager()->getViewBuilder('block_content')->view($block);
-   
+  public function build(int $block_url) {
+    for ($i = 1; $i <= $block_url; $i++) {
+      $bid = 1; // Existing block created via UI.
+      $block = \Drupal\block_content\Entity\BlockContent::load($bid);
+      $render = \Drupal::entityTypeManager()->getViewBuilder('block_content')->view($block);
+      $html = \Drupal::service('renderer')->renderPlain($render);
+      $build['#markup'] = $html;
+    } 
     return $build;
   }
 }
