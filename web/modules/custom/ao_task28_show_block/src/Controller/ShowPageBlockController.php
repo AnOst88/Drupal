@@ -5,21 +5,29 @@ namespace Drupal\ao_task28_show_block\Controller;
 use Drupal\Core\Controller\ControllerBase;
 
 /**
- * Returns responses for ao_task routes.
+ * Block output depending on url parameter.
  */
 class ShowPageBlockController extends ControllerBase {
 
   /**
-   * Builds the response.
+   * Get and show block depending on url parameter.
    */
-  public function build(int $block_url) {
+  public function ShowBuildBlock(int $block_url) {
+    $bid = 1; 
+    $block = \Drupal\block_content\Entity\BlockContent::load($bid);
+    $output = \Drupal::entityTypeManager()->getViewBuilder('block_content')->view($block);
+    $html = \Drupal::service('renderer')->renderPlain($output);
+
+    $final_output = '';
     for ($i = 1; $i <= $block_url; $i++) {
-      $bid = 1; // Existing block created via UI.
-      $block = \Drupal\block_content\Entity\BlockContent::load($bid);
-      $render = \Drupal::entityTypeManager()->getViewBuilder('block_content')->view($block);
-      $html = \Drupal::service('renderer')->renderPlain($render);
-      $build['#markup'] = $html;
-    } 
+      $final_output .= $html;
+    }
+
+    $build['content'] = [
+      '#type' => 'item',
+      '#markup' => $final_output,
+    ];
+    
     return $build;
   }
 }
