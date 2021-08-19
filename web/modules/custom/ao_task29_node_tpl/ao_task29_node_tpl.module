@@ -1,0 +1,27 @@
+<?php
+
+use Drupal\node\Entity\Node;
+
+function ao_task29_node_tpl_theme($existing, $type, $theme, $path) {
+ 
+  return [
+    'node_tpl' => [
+      'variables' =>[
+        'var1' => NULL,
+        'var2' => NULL,
+      ], 
+    ],
+  ];
+}
+
+// /**
+//  * Implements template_preprocess_HOOK().
+//  * 
+//  */
+// function template_preprocess_node_tpl(&$variables) {
+//     $nids = \Drupal::entityQuery('node')->condition('type','article')->execute();
+//     foreach($nids as $nid){
+//     $data = Node::load($nid);
+//     dump($data);
+//     }
+//   }

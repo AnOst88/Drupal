@@ -1,0 +1,7 @@
+ao_task29_nade_tpl.name:
+  path: '/tpl/node'
+  defaults: 
+    _controller: '\Drupal\ao_task29_node_tpl\Controller\NodeTplController::NodeTpl'
+    _title: 'Task 29'
+  requirements:
+    _permission: 'access content'
