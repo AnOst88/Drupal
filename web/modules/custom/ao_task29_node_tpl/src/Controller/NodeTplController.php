@@ -15,9 +15,8 @@ class NodeTplController extends ControllerBase {
    */
   public function NodeTpl() {
     $query = \Drupal::entityQuery('node')
-    ->condition('type', 'article')
-      ->condition('status', 1) 
-      ->pager(1);
+      ->condition('type', 'article')
+      ->condition('status', 1);
     $nids = $query->execute();
     
     foreach ($nids as $nid) {
