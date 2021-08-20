@@ -1,0 +1,6 @@
+configure: ao_task31_contact_form
+name: 'ao_task31_contact_form'
+type: module
+description: 'Contact Form'
+core: 8.x 
+package: 'Custom'
