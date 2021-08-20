@@ -1,25 +1,19 @@
 <?php
-use Drupal\node\Entity\Node;
 
+/**
+ * Implements hook_theme().
+ */
 function ao_task29_node_tpl_theme($existing, $type, $theme, $path) {
   return [
     'node_tpl' => [
-      'variables' => [],
+      'variables' =>[
+        'id' => NULL,
+        'label' => NULL,
+        'date' => NULL
+      ], 
     ],
   ];
 }
 
-/**
- * Implements template_preprocess_HOOK().
- */
-function template_preprocess_node_tpl(&$variables) {
-  $date_formatter = \Drupal::service('date.formatter');
-  $nids = \Drupal::entityQuery('node')->condition('type','article')->execute();
-  foreach ($nids as $nid) {
-    $data = Node::load($nid);
-  }
-  
-  $variables['date'] = $date_formatter->format(time());
-  $variables['id'] =  $data->id();
-  $variables['label'] =  $data->label();
-}
+
+
