@@ -5,17 +5,17 @@ namespace Drupal\ao_task29_node_tpl\Controller;
 use Drupal\Core\Controller\ControllerBase;
 
 /**
- * Block output depending on url parameter.
+ * Block output node from template.
  */
 class NodeTplController extends ControllerBase {
 
   /**
-   * Get and show block depending on url parameter.
+   * Get and show node from template.
    */
   public function NodeTpl() {
     return [
       '#type' => 'item',
-      '#markup' => t('Task 29')
+      '#markup' => t('Task 29 - Get and show node from template.')
     ];
   }
 }

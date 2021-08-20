@@ -19,18 +19,9 @@ class TaskNodeTpl extends BlockBase {
    * {@inheritdoc}
    */
   public function build() {
-    $nids = \Drupal::entityQuery('node')->condition('type','article')->execute();
 
-    foreach ($nids as $nid) {
-      $data = Node::load($nid);
-    }
-
-    $build['node_tpl'] = [ 
+    return [
       '#theme' => 'node_tpl',
-      '#id' => 'This node ID - ' . $data->id(),
-      '#label' => 'This node label - ' . $data->label(),
     ];
-  
-    return $build;
   }
 }
