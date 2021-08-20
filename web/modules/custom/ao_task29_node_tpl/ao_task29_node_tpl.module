@@ -1,0 +1,17 @@
+<?php
+
+/**
+ * Implements hook_theme().
+ */
+function ao_task29_node_tpl_theme($existing, $type, $theme, $path) {
+  return [
+    'node_tpl' => [
+      'variables' =>[
+        'node' => NULL,
+      ], 
+    ],
+  ];
+}
+
+
+

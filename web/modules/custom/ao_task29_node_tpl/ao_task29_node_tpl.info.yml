@@ -1,0 +1,5 @@
+name: Task 29
+description: Node tpl
+type: module
+core: 8.x
+package: Custom
