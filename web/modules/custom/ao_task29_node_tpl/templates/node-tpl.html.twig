@@ -1,10 +1,8 @@
+{% if node %}
 <p>
-  Сейчас: {{ date }}
+  This node id -  {{ node.nid.entity.id }} 
 </p>
 <p>
-  This node ID -  {{ id }} 
+  This node label -  {{ node.title.entity.label }} 
 </p>
-
-<p>
-  This node label -  {{ label }} 
-</p>
+{% endif %}
