@@ -1,0 +1,6 @@
+configure: ao_task32_county_form
+name: 'ao_task32_country_form'
+type: module
+description: 'Country/City Form'
+core: 8.x 
+package: 'Custom'
