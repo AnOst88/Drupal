@@ -23,25 +23,27 @@ class CountryForm extends FormBase {
   public function buildForm(array $form, FormStateInterface $form_state) {
     $terms_city = \Drupal::entityTypeManager()->getStorage('taxonomy_term')->loadTree('city');
     $terms_country = \Drupal::entityTypeManager()->getStorage('taxonomy_term')->loadTree('country');
- 
+
+    $city_options = [];  
+    $country_options = [];
     foreach ($terms_country as $country) {
-      $term_country[] = $country->name;
+      $country_options[$country->tid] = $country->name;
     }
     foreach ($terms_city as $city) {
-      $term_city[] = $city->name;
+      $city_options[$city->tid] = $city->name;
     }
     
     $form['taxonomy_city'] = [
       '#type' => 'select',
       '#target_type' => 'taxonomy_term',
-      '#options' => array_values($term_city),
+      '#options' => $city_options,
       '#title' => t('City'),
     ];
 
     $form['taxonomy_country'] = [
       '#type' => 'select',
       '#target_type' => 'taxonomy_term',
-      '#options' =>  array_values($term_country),
+      '#options' => $country_options,
       '#title' => t('Country'),
     ];
 
@@ -53,7 +55,7 @@ class CountryForm extends FormBase {
     return $form;
     }
 
-      /**
+    /**
      * Submit form.
      */
     public function submitForm(array &$form, FormStateInterface $form_state) {
