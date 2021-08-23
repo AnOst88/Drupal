@@ -1,0 +1,7 @@
+ao_task32_country_form.name:
+  path: 'counrty/form'
+  defaults: 
+    _form: '\Drupal\ao_task32_country_form\Form\CountryForm'
+    _title: 'Custom Country Form'
+  requirements:
+    _permission: 'access content'
