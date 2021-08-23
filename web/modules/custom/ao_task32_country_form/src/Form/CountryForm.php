@@ -25,27 +25,23 @@ class CountryForm extends FormBase {
     $terms_country = \Drupal::entityTypeManager()->getStorage('taxonomy_term')->loadTree('country');
  
     foreach ($terms_country as $country) {
-      $term_country[] = [
-        'country' => $country->name,
-      ];
+      $term_country[] = $country->name;
     }
     foreach ($terms_city as $city) {
-      $term_city[] = [
-        'city' => $city->name,
-      ];
+      $term_city[] = $city->name;
     }
     
     $form['taxonomy_city'] = [
       '#type' => 'select',
       '#target_type' => 'taxonomy_term',
-      '#options' => $term_city,
+      '#options' => array_values($term_city),
       '#title' => t('City'),
     ];
 
     $form['taxonomy_country'] = [
       '#type' => 'select',
       '#target_type' => 'taxonomy_term',
-      '#options' =>  $term_country,
+      '#options' =>  array_values($term_country),
       '#title' => t('Country'),
     ];
 
@@ -61,7 +57,6 @@ class CountryForm extends FormBase {
      * Submit form.
      */
     public function submitForm(array &$form, FormStateInterface $form_state) {
-     
       $context = $this->t('Saved');
       $this->messenger()->addMessage($context);
     }
