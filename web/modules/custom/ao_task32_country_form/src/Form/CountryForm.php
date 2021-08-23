@@ -30,7 +30,9 @@ class CountryForm extends FormBase {
       ];
     }
     foreach ($terms_city as $city) {
-      $term_city[] = $city->name;
+      $term_city[] = [
+        'city' => $city->name,
+      ];
     }
     
     $form['taxonomy_city'] = [
@@ -60,5 +62,7 @@ class CountryForm extends FormBase {
      */
     public function submitForm(array &$form, FormStateInterface $form_state) {
      
+      $context = $this->t('Saved');
+      $this->messenger()->addMessage($context);
     }
 }
