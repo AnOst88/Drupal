@@ -27,10 +27,10 @@ class AjaxCountryForm extends FormBase {
     $terms_country = \Drupal::entityTypeManager()->getStorage('taxonomy_term')->loadTree('country');
     $country_options = [];
 
-    foreach ($terms_country as $key => $country) {
+    foreach ($terms_country as $country) {
       //$country_options[$country->tid] = $country->name;
      // dump( $country_options);
-     $country_options[$key] = $country->name;
+     $country_options[] = $country->name;
     }
     
     
@@ -41,12 +41,7 @@ class AjaxCountryForm extends FormBase {
       '#title' => t('Country'),
       '#ajax' => [
         'callback' => '::myAjaxCallback',
-        'disable-refocus' => FALSE,
         'event' => 'change',
-        'progress' => [
-          'type' => 'throbber',
-          'message' => $this->t('Verifying entry...'),
-        ],
         'wrapper' => 'first',
       ],
     ];
@@ -62,13 +57,9 @@ class AjaxCountryForm extends FormBase {
       '#validated' => 'true',
       '#ajax' => [
         'callback' => '::myAjaxCallback2',
-        'disable-refocus' => FALSE,
         'event' => 'change',
         'wrapper' => 'edit-output',
-        'progress' => [
-          'type' => 'throbber',
-          'message' => $this->t('Verifying entry...'),
-        ],
+        
       ],
     ];
 
@@ -87,9 +78,9 @@ class AjaxCountryForm extends FormBase {
     $terms_city = \Drupal::entityTypeManager()->getStorage('taxonomy_term')->loadTree('city');
     $city_options = [];
 
-    foreach ($terms_city as $key => $city) {
-      $city_options[$key] = [
-        '#theme' => $city->name,
+    foreach ($terms_city as $city) {
+      $city_options[] = [
+        '1' => $city->name,
       ];
     }
       
