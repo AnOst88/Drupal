@@ -51,16 +51,8 @@ class AjaxCountryForm extends FormBase {
       '#target_type' => 'taxonomy_term',
       '#prefix' => '<div id="first">',
       '#suffix' => '</div>',
-      '#validated' => 'true',
       '#options' => [],
       '#title' => t('City'),
-      '#validated' => 'true',
-      '#ajax' => [
-        'callback' => '::myAjaxCallback2',
-        'event' => 'change',
-        'wrapper' => 'edit-output',
-        
-      ],
     ];
 
     $form['submit'] = [
