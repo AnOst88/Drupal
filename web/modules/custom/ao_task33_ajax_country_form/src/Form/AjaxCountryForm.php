@@ -36,7 +36,6 @@ class AjaxCountryForm extends FormBase {
     
     $form['taxonomy_country'] = [
       '#type' => 'select',
-      '#target_type' => 'taxonomy_term',
       '#options' => $country_options,
       '#title' => t('Country'),
       '#ajax' => [
@@ -48,7 +47,6 @@ class AjaxCountryForm extends FormBase {
     
     $form['taxonomy_city'] = [
       '#type' => 'select',
-      '#target_type' => 'taxonomy_term',
       '#prefix' => '<div id="first">',
       '#suffix' => '</div>',
       '#options' => [],
