@@ -28,16 +28,13 @@ class AjaxCountryForm extends FormBase {
     $country_options = [];
 
     foreach ($terms_country as $country) {
-      //$country_options[$country->tid] = $country->name;
-     // dump( $country_options);
-     $country_options[] = $country->name;
+      $country_options[$country->tid] = $country->name;
     }
-    
     
     $form['taxonomy_country'] = [
       '#type' => 'select',
       '#options' => $country_options,
-      '#title' => t('Country'),
+      '#title' => $this->t('Country'),
       '#ajax' => [
         'callback' => '::myAjaxCallback',
         'event' => 'change',
@@ -50,7 +47,7 @@ class AjaxCountryForm extends FormBase {
       '#prefix' => '<div id="first">',
       '#suffix' => '</div>',
       '#options' => [],
-      '#title' => t('City'),
+      '#title' => $this->t('City'),
     ];
 
     $form['submit'] = [
@@ -69,11 +66,9 @@ class AjaxCountryForm extends FormBase {
     $city_options = [];
 
     foreach ($terms_city as $city) {
-      $city_options[] = [
-        '1' => $city->name,
-      ];
+      $city_options[$city->tid] = $city->name;
     }
-      
+ 
     $selctedOption = $form_state->getValue("taxonomy_country");
     $form['taxonomy_city']['#options'] = $city_options[$selctedOption]; 
       // dump($form['taxonomy_city']);
