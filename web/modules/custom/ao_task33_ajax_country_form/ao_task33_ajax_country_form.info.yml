@@ -1,0 +1,6 @@
+configure: ao_task33_ajax_county_form
+name: 'ao_task33_ajax_country_form'
+type: module
+description: 'AJAX Country/City Form'
+core: 8.x 
+package: 'Custom'
