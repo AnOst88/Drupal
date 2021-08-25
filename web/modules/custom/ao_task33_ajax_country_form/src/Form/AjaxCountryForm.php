@@ -99,16 +99,9 @@ class AjaxCountryForm extends FormBase {
       }
        
     if (strlen($phone) > 0) {
-      $phone = str_replace (' ', '', $phone);
       $phone = str_replace ('-', '', $phone);
-      $phone = str_replace ('(', '', $phone);
-      $phone = str_replace (')', '', $phone);
-      $phone = str_replace ('[', '', $phone);
-      $phone = str_replace (']', '', $phone);
-      $phone = str_replace ('{', '', $phone);
-      $phone = str_replace ('}', '', $phone);
       
-      if (!preg_match('/^(375|80)(29|25|44|33)(\d{3})(\d{2})(\d{2})$/',$phone)) {
+      if (!preg_match('/^(375)(29|25|44|33)(\d{3})(\d{2})(\d{2})$/',$phone)) {
         $this->messenger()->deleteAll();
         $form_state->setErrorByName('error',
         $this->t("Please enter valid country code (375) or operator code (25,29,33,44)."));
