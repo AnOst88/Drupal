@@ -6,13 +6,11 @@ use Drupal\Core\Form\FormStateInterface;
  * Implements hook_theme().
  */
 function ao_task33_ajax_country_form_form_alter(&$form, FormStateInterface $form_state, $form_id) {
-  if($form_id ==  'ajax_country_form' || $form_id == 'contact_form') {
     $form['phone'] = [
       '#type' => 'textfield',
       '#title' => t('Phone'),
       '#description' => t('Please enter your telephone number.'),
     ];
   }
-}
 
 
