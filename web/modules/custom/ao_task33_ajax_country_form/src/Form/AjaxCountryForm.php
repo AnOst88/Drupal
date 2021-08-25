@@ -25,11 +25,15 @@ class AjaxCountryForm extends FormBase {
   public function buildForm(array $form, FormStateInterface $form_state) {
     $terms_country = \Drupal::entityTypeManager()->getStorage('taxonomy_term')->loadTree('country');
     $get_country = $form_state->getValue('taxonomy_country');
+
+    if (!empty($get_country)){
     $terms_city = \Drupal::entityTypeManager()->getStorage('taxonomy_term')
       ->getQuery()
       ->condition('vid', 'city')
       ->condition('field_city_country', $get_country)
       ->execute();
+    }
+
     $country_options = [];
     $city_options = [];
 
@@ -97,16 +101,14 @@ class AjaxCountryForm extends FormBase {
     $get_option_country = $form_state->getValue('taxonomy_country');
     $object_country = \Drupal::entityTypeManager()->getStorage('taxonomy_term')->load($get_option_country);
 
-    if(!empty($object_country)){
-      $get_option_city = $form_state->getValue('taxonomy_city');
-      $object_city = \Drupal::entityTypeManager()->getStorage('taxonomy_term')->load($get_option_city);
-    } 
+    $get_option_city = $form_state->getValue('taxonomy_city');
+    $object_city = \Drupal::entityTypeManager()->getStorage('taxonomy_term')->load($get_option_city);
    
-      $context = $this->t('City - %t_city. Country - %t_country.', [
-        '%t_city' => $object_city->get('name')->value,
-        '%t_country' =>   $object_country->get('name')->value,
-      ]);
-      \Drupal::logger('ao_task33_ajax_country_form')->notice($context);
-      $this->messenger()->addMessage($context);
+    $context = $this->t('City - %t_city. Country - %t_country.', [
+      '%t_city' => $object_city->get('name')->value,
+      '%t_country' =>   $object_country->get('name')->value,
+    ]);
+    \Drupal::logger('ao_task33_ajax_country_form')->notice($context);
+    $this->messenger()->addMessage($context);
   }
 }
