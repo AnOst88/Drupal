@@ -86,8 +86,7 @@ class AjaxCountryForm extends FormBase {
   */
   public function validateForm(array &$form, FormStateInterface $form_state) {
     parent::validateForm($form, $form_state);
-    $get_option_city = $form_state->getValue('taxonomy_city');
-    if(empty($get_option_city)){
+    if(empty($form_state->getValue('taxonomy_city'))){
       $form_state->setErrorByName('error',
       $this->t('City is not select.'));
       \Drupal::logger('ao_task33_ajax_country_form')->notice('City is not select');
