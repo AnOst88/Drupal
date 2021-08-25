@@ -90,7 +90,31 @@ class AjaxCountryForm extends FormBase {
       $this->t('City is not select.'));
       \Drupal::logger('ao_task33_ajax_country_form')->notice('City is not select');
     }
+
+    $phone = $form_state->getValue('phone');
+    if (!empty($phone) > 0 && !preg_match('/^[0-9]{1,3}-[0-9]{2}-[0-9]{3,4}-[0-9]{3}$/', $phone)) {
+      $this->messenger()->deleteAll();
+      $form_state->setErrorByName('error',
+      $this->t('Phone number must be in format - xxx-xx-nnnn-nnn.'));
+    }
+    if (strlen($phone) > 0) {
+      $phone = str_replace (' ', '', $phone);
+      $phone = str_replace ('-', '', $phone);
+      $phone = str_replace ('(', '', $phone);
+      $phone = str_replace (')', '', $phone);
+      $phone = str_replace ('[', '', $phone);
+      $phone = str_replace (']', '', $phone);
+      $phone = str_replace ('{', '', $phone);
+      $phone = str_replace ('}', '', $phone);
+      
+      if (!preg_match('/^375[0-9]{9,10}$/',$phone)) {
+        $this->messenger()->deleteAll();
+        $form_state->setErrorByName('error',
+        $this->t('Enter country code - 375.'));
+      }
+    }
   }
+  
 
   /**
   * Submit form.
