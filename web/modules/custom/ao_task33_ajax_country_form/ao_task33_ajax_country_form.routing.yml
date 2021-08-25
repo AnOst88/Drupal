@@ -1,0 +1,7 @@
+ao_task33_ajax_country_form.name:
+  path: 'ajax_country/form'
+  defaults: 
+    _form: '\Drupal\ao_task33_ajax_country_form\Form\AjaxCountryForm'
+    _title: 'Custom Ajax Country Form'
+  requirements:
+    _permission: 'access content'
