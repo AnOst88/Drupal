@@ -92,18 +92,27 @@ class AjaxCountryForm extends FormBase {
     }
 
     $phone = $form_state->getValue('phone');
-    if (!empty($phone) > 0 && !preg_match('/^[0-9]{1,3}-[0-9]{2}-[0-9]{3,4}-[0-9]{3}$/', $phone)) {
-      $this->messenger()->deleteAll();
-      $form_state->setErrorByName('error',
-      $this->t('Phone number must be in format - xxx-xx-nnnn-nnn.'));
-    }
-   
-    if(substr($phone, 0, 6) !== '375-25' &&
-      substr($phone, 0, 6) !== '375-29' &&
-      substr($phone, 0, 6) !== '375-33' &&
-      substr($phone, 0, 6) !== '375-44'){
+      if (!empty($phone) > 0 && !preg_match('/^[0-9]{1,3}-[0-9]{2}-[0-9]{3,4}-[0-9]{3}$/', $phone)) {
+        $this->messenger()->deleteAll();
         $form_state->setErrorByName('error',
-        $this->t("Please enter valid country code (375) or operator code (25,29,33,44)"));
+        $this->t('Phone number must be in format - xxx-xx-nnnn-nnn.'));
+      }
+       
+    if (strlen($phone) > 0) {
+      $phone = str_replace (' ', '', $phone);
+      $phone = str_replace ('-', '', $phone);
+      $phone = str_replace ('(', '', $phone);
+      $phone = str_replace (')', '', $phone);
+      $phone = str_replace ('[', '', $phone);
+      $phone = str_replace (']', '', $phone);
+      $phone = str_replace ('{', '', $phone);
+      $phone = str_replace ('}', '', $phone);
+      
+      if (!preg_match('/^(375|80)(29|25|44|33)(\d{3})(\d{2})(\d{2})$/',$phone)) {
+        $this->messenger()->deleteAll();
+        $form_state->setErrorByName('error',
+        $this->t("Please enter valid country code (375) or operator code (25,29,33,44)."));
+      }
     }
   }
   
