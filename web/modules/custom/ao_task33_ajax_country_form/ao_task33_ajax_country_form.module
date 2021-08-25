@@ -9,7 +9,7 @@ function ao_task33_ajax_country_form_form_alter(&$form, FormStateInterface $form
     $form['phone'] = [
       '#type' => 'textfield',
       '#title' => t('Phone'),
-      '#description' => t('Please enter your telephone number.'),
+      '#description' => t('Please enter your telephone number. Format xxx-xx-nnnn-nnn'),
     ];
   }
 
