@@ -18,7 +18,7 @@ function ao_task69_ho_mail_mail ($key, &$message, $params) {
       $message['from'] = \Drupal::config('system.site')->get('mail');
       $message['subject'] = t('Создана статья: @title', array('@title' => $params['node_title']), $options);
       $message['body'][] = $params['message'];
-    break;
+      break;
   }
 }
 
