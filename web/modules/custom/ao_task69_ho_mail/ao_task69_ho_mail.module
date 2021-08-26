@@ -12,11 +12,11 @@ function ao_task69_ho_mail_mail ($key, &$message, $params) {
   $options = [
     'langcode' => $message['langcode'],
   ];
-
+ 
   switch ($key) {
     case 'create_article':
       $message['from'] = \Drupal::config('system.site')->get('mail');
-      $message['subject'] = t('Создана статья: @title', array('@title' => $params['node_title']), $options);
+      $message['subject'] = t('Article created: @title', ['@title' => $params['node_title']], $options);
       $message['body'][] = $params['message'];
       break;
   }
