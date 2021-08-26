@@ -26,7 +26,7 @@ function ao_task69_ho_mail_mail ($key, &$message, $params) {
  * Implements hook_entity_insert().
  */
 function ao_task69_ho_mail_entity_insert (Drupal\Core\Entity\EntityInterface $entity) {
-  if ($entity->getEntityTypeId() !== 'node' || ($entity->getEntityTypeId() === 'node' && $entity->bundle() !== 'article')) {
+  if ($entity->getEntityTypeId() !== 'node' || $entity->getEntityTypeId() === 'node' && $entity->bundle() !== 'article') {
     return;
   }
 
@@ -45,4 +45,5 @@ function ao_task69_ho_mail_entity_insert (Drupal\Core\Entity\EntityInterface $en
   } else {
     \Drupal::messenger()->addMessage(t('Your message has been sent.'));
   }
+
 }
