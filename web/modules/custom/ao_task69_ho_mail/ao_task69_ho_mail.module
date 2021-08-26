@@ -2,16 +2,16 @@
 
 /**
  * @file
- * Contains ao_task69_ho_mail.module..
+ * Contains ao_task69_ho_mail.module.
  */
 
 /**
  * Implements hook_mail().
  */
-function ao_task69_ho_mail_mail($key, &$message, $params) {
-  $options = array(
+function ao_task69_ho_mail_mail ($key, &$message, $params) {
+  $options = [
     'langcode' => $message['langcode'],
-  );
+  ];
 
   switch ($key) {
     case 'create_article':
@@ -25,14 +25,12 @@ function ao_task69_ho_mail_mail($key, &$message, $params) {
 /**
  * Implements hook_entity_insert().
  */
-function ao_task69_ho_mail_entity_insert(Drupal\Core\Entity\EntityInterface $entity) {
-
+function ao_task69_ho_mail_entity_insert (Drupal\Core\Entity\EntityInterface $entity) {
   if ($entity->getEntityTypeId() !== 'node' || ($entity->getEntityTypeId() === 'node' && $entity->bundle() !== 'article')) {
     return;
   }
 
   $mailManager = \Drupal::service('plugin.manager.mail');
-
   $module = 'ao_task69_ho_mail';
   $key = 'create_article';
   $to = \Drupal::currentUser()->getEmail();
@@ -40,12 +38,11 @@ function ao_task69_ho_mail_entity_insert(Drupal\Core\Entity\EntityInterface $ent
   $params['node_title'] = $entity->label();
   $langcode = \Drupal::currentUser()->getPreferredLangcode();
   $send = true;
-
   $result = $mailManager->mail($module, $key, $to, $langcode, $params, NULL, $send);
+
   if ($result['result'] !== true) {
     \Drupal::messenger()->addMessage(t('There was a problem sending your message and it was not sent.'), 'error');
-  }
-  else {
+  } else {
     \Drupal::messenger()->addMessage(t('Your message has been sent.'));
   }
 }
